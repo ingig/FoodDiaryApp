@@ -1,0 +1,21 @@
+﻿Insert
+- write out 'Doing Insert'
+- set string var %messageSent% = ''
+- if %event% is not empty then
+    - set %messageSent% = "This user request was was created on %event.CreatedAt%, take that into account when determining date and time"
+    - set %event% = null
+- write out 'Doing message:%userInput%'
+- read llm/insertSystem.txt, to %insertSystem%, load vars
+- [llm] system: %insertSystem%
+    user: %userInput%
+    scheme: {"date": datetime, "dish": {"name": string, "totalWeight": number, "ingredients": [{"name": string, "quantity": number, "calories": number, "carbs":number,"fat":number,"protein":number}], "totalCarbs":number,"totalFat":number,"totalProtein":number, "totalCalories": number}, "emojis": string}
+    log level: warning
+    write to %foodEntry%
+- insert into food_entries 
+        date=%foodEntry.date%, %userInput%, dish_name=%foodEntry.dish.name%, 
+        total_weight=%foodEntry.dish.totalWeight%, ingredients=%foodEntry.dish.ingredients%, 
+        carbs=%foodEntry.dish.totalCarbs%, fat=%foodEntry.dish.totalFat%, 
+        protein=%foodEntry.dish.totalProtein%, total_calories=%foodEntry.dish.totalCalories%, 
+        emojis=%foodEntry.emojis%
+- call goal SendMessage content=%foodEntry.emojis% - Calories: %foodEntry.dish.totalCalories%
+- call !Start

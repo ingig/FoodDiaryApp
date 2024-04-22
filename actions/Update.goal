@@ -1,0 +1,16 @@
+Update
+- write out 'Doing Update'
+- get all table information from database, write to %tableInfo%
+- select * from food_entries order by id desc limit 10, write to %foodEntries%
+- select * from symptoms order by id desc limit 10, write to %symptoms%
+- read llm/tableInfo.txt, write to %tableInfo%
+- read llm/updateSystem.txt, write to %updateSystem%
+- read llm/updateAssistant.txt, write to %updateAssistant%, load vars
+- [llm] system:%updateSystem%
+        assistant: %updateAssistant%
+        user: %userInput%
+        model: 'gpt-4-turbo',
+        scheme: {sql:string, explain:string}
+- write out '%sql% - %explain%'
+- execute sql update, sql=%sql%
+- call goal !SendMessage content=%explain%

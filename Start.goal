@@ -1,0 +1,39 @@
+﻿Start
+- if %Settings.Measurement% is empty, then call !FirstTimeSetup
+- if %Settings.NostrAddress% is not empty then call ListenToMessages
+- call !ShowTotalCalories
+- ask 'You can send me what you ate today, you can also do other stuff
+
+        Type in:
+            'settings' to view/change settings
+            how many calories have I eating in last week
+            how much protein have I had today
+            add tomato sauce to last meal
+            delete my last entry
+    
+    What did you eat today?', write to %userInput%
+- call !DoUserInput
+
+DoUserInput
+- if %userInput% = 'settings' then !Settings, else call !HandleUserInput
+- call !Start
+
+ListenToMessages
+- load public message address, write to %messageAddress%
+- write out 'Send me message on: %messageAddress%'
+- listen for new message from %Settings.NostrAddress%, 
+    call !HandleMessage content=%userInput%, event=%event%
+
+HandleMessage
+- if %userInput% is not empty then 
+    - set %IsMessage%=true
+    - call !HandleUserInput
+    - set %IsMessage%=false
+
+HandleUserInput
+- read llm/chooseGoalSystem.txt, write to %chooseGoalSystem%
+- [llm] system: %chooseGoalSystem%
+        user: %userInput%
+        model: 'gpt-3.5-turbo-1106'
+        scheme: {goalName:string}
+- call goal %goalName%

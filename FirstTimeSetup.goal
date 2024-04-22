@@ -1,0 +1,10 @@
+﻿FirstTimeSetup
+- ask 'Do you want to use metric or imperial measurements?', options 'metric', 'imperial', write to %newMeasurement%
+- ask 'In what languages will you write in, you can have multiple languages', write to %newLanguages%
+- ask 'Do you want to set a Nostr address? (This allows you to send diary on your phone): yes or no', options 'yes' or 'no', write to %setNostr%
+- if %setNostr% = 'yes' then
+    - ask 'Please enter your Nostr address:', must start with 'npub', write to %newNostrAddress%
+- set %Settings.Measurement%=%newMeasurement%
+- set %Settings.NostrAddress%=%newNostrAddress%
+- set %Settings.Languages%=%newLanguages%
+- send message to %Settings.NostrAddress%, content: 'Hi, I am your food diary. Send me your entries'

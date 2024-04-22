@@ -1,0 +1,17 @@
+{
+  "GoalName": "call goal %goalName%",
+  "Comment": null,
+  "GoalSteps": [],
+  "Description": null,
+  "Visibility": 0,
+  "GoalFileName": "Start.goal",
+  "RelativeGoalPath": "\\Start.goal",
+  "RelativeGoalFolderPath": "\\",
+  "RelativePrPath": ".build\\Start\\call goal %goalName%\\00. Goal.pr",
+  "RelativePrFolderPath": ".build\\Start\\call goal %goalName%",
+  "BuilderVersion": "0.1.0.6",
+  "GoalApiInfo": null,
+  "Injections": [],
+  "Signature": null,
+  "Hash": "7f711a65aed57988283f6ba1b60d6dcf96b83b99b6138e832948fee80240e90f"
+}

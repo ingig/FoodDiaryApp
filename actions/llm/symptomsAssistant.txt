@@ -1,0 +1,6 @@
+=== Last food entries ===
+%foodEntries%
+=== Last food entries ===
+=== Last symptoms ===
+%symptoms%
+=== Last symptoms ===

@@ -1,0 +1,12 @@
+Following sql statement was executed. 
+
+=== sql ==
+%sql%
+=== sql ==
+
+It was initated by this statment from the user
+=== User statement ===
+%userInput%
+=== User statement ===
+
+Write in short text on what was updated. Dont mention SQL since non technical person will read this

@@ -1,0 +1,7 @@
+Following is Table scheme in Sqlite database
+
+Table: food_entries 
+Columns: (id BIGINT PRIMARY KEY, date TIMESTAMP NOT NULL, dish_name TEXT NOT NULL, total_weight NUMERIC, ingredients JSON, total_calories NUMERIC, emojis TEXT, carbs NUMERIC, fat NUMERIC, protein NUMERIC);
+
+Table: symptoms 
+Columns: (id BIGINT PRIMARY KEY, food_entry_id BIGINT REFERENCES food_entries(id), description TEXT NOT NULL, created TIMESTAMP DEFAULT CURRENT_TIMESTAMP);

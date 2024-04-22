@@ -1,0 +1,11 @@
+SymptomsQuery
+- write out 'Doing SymptomsQuery'
+- read llm/symptomsSystem.txt, into %symptomsSystem%
+- select * from food_entries order by id desc limit 10, write to %foodEntries%
+- select * from symptoms order by id desc limit 10, write to %symptoms%
+- read llm/symptonsAssistant.txt, into %symptomsAssistant%
+- [llm] system: %symptomsSystem%
+        assistant: %symptomsAssistant%
+        user: %userInput%
+        write to %response%
+- call goal SendMessage content=%response%

@@ -1,0 +1,17 @@
+I want to create a food diary app, on first time app starts, ask user if he want to use metric or emprical measurements, then ask if he wants to set Nostr address(explain what that is). Then app starts by displaying current total calories for the day, then he asks user what he ate, if he types in 'list', then show list of last 5 days what was eaten, if he types 'settings', show settings available and possiblity to change them, else take the content and ask llm analyze it to structure it in the following way. 
+
+{
+  "date": "2024-04-14",
+  "dish": {
+    "name": string,
+    "totalWeight": number,
+    "ingredients": [
+      {"name": string, "quantity": number, "calories": number},
+
+    ],
+    "totalCalories": number
+  },
+  "notes": string
+}
+
+The app needs to store this into a database. The app should listen for new message if nostr address was set, when a new message comes inn, it should call again (reuse the same goal) the llm to take the content analyze it and store in db

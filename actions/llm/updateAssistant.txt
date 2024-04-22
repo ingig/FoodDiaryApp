@@ -1,0 +1,9 @@
+=== Database structure ===
+%tableInfo%
+=== Database structure ===
+=== Last food entries ===
+%foodEntries%
+=== Last food entries ===
+=== Last symptoms ===
+%symptoms%
+=== Last symptoms ===

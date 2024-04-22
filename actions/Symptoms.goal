@@ -1,0 +1,4 @@
+Symptoms
+- write out 'Doing Symptoms'
+- insert into Symptoms description=%userInput%
+- call goal SendMessage content='got it'

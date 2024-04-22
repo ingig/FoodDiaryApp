@@ -1,0 +1,42 @@
+﻿Settings
+- write out 'Current settings: 
+    Measurement - %Settings.Measurement%
+    Languages - %Settings.Languages%
+    Nostr address - %Settings.NostrAddress%'
+- ask '\nWhat would you like to do?
+
+  1. Change measurement from %Settings.Measurement%
+  2. Change Nostr address %Settings.NostrAddress%
+  3. Change Languages from %Settings.Languages%
+  4. Delete entries from diary
+  5. Back to start", must be number 1-5, write to %answer%
+- if %answer% == 1, call ChangeMeasurement
+- if %answer% == 2, call ChangeAddress
+- if %answer% == 3, call ChangLanguages
+- if %answer% == 4, call DeleteEntry
+- if %answer% == 5, call Start
+- call !Start
+
+ChangeMeasurement
+- ask, 'What are your measurements in, metric or imperial?', options 'metric', 'imperial', write to %newMeasurement%
+- set Settings.Measurement%=%newMeasurement%
+
+ChangeAddress
+- ask, 'What is the new nostr address? You current is %Settings.NostrAddress%', must start with 'npub', write to %newAddress%
+- set %Settings.NostrAddress%=%newAddress%
+- send message to %newAddress%, content: 'Hi, I am your food diary'
+
+ChangLanguages
+- ask 'In what languages will you write in, you can have multiple languages', write to %newLanguages%
+- set %Settings.Languages%=%newLanguages%
+
+DeleteEntry
+- select * from food_entries order by id desc, write to %entries%
+- foreach %entries% call !ShowEntryToDelete
+- ask 'What entry would you like to delete? (0 to exit)', must be number, write to %entryId%
+- if %entryId > 0 then 
+    - delete from food_entries where id=%entryId%
+
+
+ShowEntryToDelete
+- write out '%item.id% - %item.date%, Dish: %item.dish_name%, Calories: %item.total_calories%'

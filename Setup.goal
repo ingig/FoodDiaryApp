@@ -1,0 +1,10 @@
+﻿Setup
+- create table food_entries
+    columns: date(datetime, not null), dish_name(string, not null), user_input(string), total_weight(number),
+             ingredients(json), total_calories(number), carbs(number), fat(number), protein(number)
+            , emojis(string)
+- create table symptoms, columns: 
+    food_entry_id(foreign key to food_entries)
+    description(string, not null)
+    created(datetime, default current date)
+    

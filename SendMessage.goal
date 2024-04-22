@@ -1,0 +1,5 @@
+SendMessage
+- write out %content%
+- if %IsMessage% then 
+    - send message to %Settings.NostrAddress%, content=%content%
+    - set %IsMessage% = false
