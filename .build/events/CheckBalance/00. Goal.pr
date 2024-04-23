@@ -3,17 +3,17 @@
   "Comment": null,
   "GoalSteps": [
     {
-      "Text": "if %__LLM_Balance__% < 5*10^5 then",
+      "Text": "if %__LLM_Balance__% is not  empty and %__LLM_Balance__% < 5*10^5 (can be lower then 0) then",
       "Comment": null,
       "ModuleType": "PLang.Modules.ConditionalModule",
       "Name": "CheckBalanceCondition",
-      "Description": "Check if the variable %__LLM_Balance__% is less than 500000.",
+      "Description": "Check if the variable %__LLM_Balance__% is not empty and its value is less than 500,000. The value can also be negative.",
       "PrFileName": "01. CheckBalanceCondition.pr",
       "RelativePrPath": ".build\\events\\CheckBalance\\01. CheckBalanceCondition.pr",
       "Indent": 0,
       "Execute": true,
       "RunOnce": false,
-      "Generated": "2024-04-23T09:31:57.0871416+00:00",
+      "Generated": "2024-04-23T15:44:03.7518327+00:00",
       "WaitForExecution": true,
       "ErrorHandler": null,
       "RetryHandler": null,
@@ -59,14 +59,14 @@
             "content": [
               {
                 "type": "text",
-                "text": "if %__LLM_Balance__% < 5*10^5 then"
+                "text": "if %__LLM_Balance__% is not  empty and %__LLM_Balance__% < 5*10^5 (can be lower then 0) then"
               }
             ]
           }
         ],
         "model": "gpt-4-turbo",
         "caching": true,
-        "RawResponse": "{\n  \"StepName\": \"CheckBalanceCondition\",\n  \"StepDescription\": \"Check if the variable %__LLM_Balance__% is less than 500000.\",\n  \"Modules\": [\n    \"PLang.Modules.ConditionalModule\"\n  ],\n  \"WaitForExecution\": true\n}"
+        "RawResponse": "{\n  \"StepName\": \"CheckBalanceCondition\",\n  \"StepDescription\": \"Check if the variable %__LLM_Balance__% is not empty and its value is less than 500,000. The value can also be negative.\",\n  \"Modules\": [\n    \"PLang.Modules.ConditionalModule\"\n  ],\n  \"WaitForExecution\": true\n}"
       }
     },
     {
@@ -144,9 +144,9 @@
   "RelativeGoalFolderPath": "\\events",
   "RelativePrPath": ".build\\events\\CheckBalance\\00. Goal.pr",
   "RelativePrFolderPath": ".build\\events\\CheckBalance",
-  "BuilderVersion": "0.1.0.6",
+  "BuilderVersion": "0.1.0.7",
   "GoalApiInfo": null,
   "Injections": [],
   "Signature": null,
-  "Hash": "51409c3e3e50568b32433626289e88cd41aedcdbde0ca656cef5d7377cf8169b"
+  "Hash": "bd3c2be9ee8d656779372650b688e2a96c78aa35b530eee7c5e3a6ab805eeac3"
 }

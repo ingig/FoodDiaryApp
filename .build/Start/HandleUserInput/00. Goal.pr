@@ -211,7 +211,7 @@
   "RelativeGoalFolderPath": "\\",
   "RelativePrPath": ".build\\Start\\HandleUserInput\\00. Goal.pr",
   "RelativePrFolderPath": ".build\\Start\\HandleUserInput",
-  "BuilderVersion": "0.1.0.6",
+  "BuilderVersion": "0.1.0.7",
   "GoalApiInfo": {
     "Method": "POST",
     "Description": "This API endpoint handles user input to select a goal system. It reads from a predefined system file, receives user input, and writes the chosen goal system to a specified location.",
@@ -224,5 +224,5 @@
   },
   "Injections": [],
   "Signature": null,
-  "Hash": "02e33e157cad30d1004d4cb72313c7549d5bcd17cbc3ad65bf855094fa2e92a8"
+  "Hash": "573d304dfb58635ed3bf336abcbd9e8f00942211da6a1af157f03f4e5cfe711c"
 }

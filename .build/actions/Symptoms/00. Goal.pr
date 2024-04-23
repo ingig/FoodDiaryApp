@@ -211,9 +211,9 @@
   "RelativeGoalFolderPath": "\\actions",
   "RelativePrPath": ".build\\actions\\Symptoms\\00. Goal.pr",
   "RelativePrFolderPath": ".build\\actions\\Symptoms",
-  "BuilderVersion": "0.1.0.6",
+  "BuilderVersion": "0.1.0.7",
   "GoalApiInfo": null,
   "Injections": [],
   "Signature": null,
-  "Hash": "8bf2a322080b0f2e5b26ed1743fb92da631f0f8e82b15dddc5dfb0610cbb4065"
+  "Hash": "87f2e66c500814ec77d77c83b7021a1f37924b296a9d821a774b8fafc81e4e90"
 }

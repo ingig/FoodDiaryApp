@@ -1,4 +1,4 @@
 HandleError
-- if %__LLM_Balance__% <= 0 then
+- if %__LLM_Balance__% is not empty and %__LLM_Balance__% <= 0 then
     - call goal !SendMessage content='Just wanted to let you know that your balance is $0, you can purchase credts here %__LLM_PaymentUrl__%'
     - call goal !Start

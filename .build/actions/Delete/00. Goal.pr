@@ -680,7 +680,7 @@
   "RelativeGoalFolderPath": "\\actions",
   "RelativePrPath": ".build\\actions\\Delete\\00. Goal.pr",
   "RelativePrFolderPath": ".build\\actions\\Delete",
-  "BuilderVersion": "0.1.0.6",
+  "BuilderVersion": "0.1.0.7",
   "GoalApiInfo": {
     "Method": "DELETE",
     "Description": "This API endpoint performs a series of operations to delete specific entries from the database. It retrieves the latest entries from the 'food_entries' and 'symptoms' tables, reads specific deletion instructions from text files, constructs SQL deletion commands based on these instructions and user input, executes the deletion, and finally sends a message explaining the performed actions.",
@@ -693,5 +693,5 @@
   },
   "Injections": [],
   "Signature": null,
-  "Hash": "9d629f360aee35d415d687532d9431d4af488e7d017876fa3b636a5ff84d796e"
+  "Hash": "c63b70e987895e9e334bc4a62804c4a5332b09352e58455bdc23b858507f5b03"
 }

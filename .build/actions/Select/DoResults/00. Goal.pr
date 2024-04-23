@@ -278,9 +278,9 @@
   "RelativeGoalFolderPath": "\\actions",
   "RelativePrPath": ".build\\actions\\Select\\DoResults\\00. Goal.pr",
   "RelativePrFolderPath": ".build\\actions\\Select\\DoResults",
-  "BuilderVersion": "0.1.0.6",
+  "BuilderVersion": "0.1.0.7",
   "GoalApiInfo": null,
   "Injections": [],
   "Signature": null,
-  "Hash": "3557b25c9a777acddb70f7459a4b575db08db5757e05ac9561d53e7e5afb1e5c"
+  "Hash": "b7c4a7a86c2885575eb0c8a0350df0982a02150b952cd028685a21716ce6e6e1"
 }

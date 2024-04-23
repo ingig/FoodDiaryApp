@@ -278,9 +278,9 @@
   "RelativeGoalFolderPath": "\\",
   "RelativePrPath": ".build\\SendMessage\\00. Goal.pr",
   "RelativePrFolderPath": ".build\\SendMessage",
-  "BuilderVersion": "0.1.0.6",
+  "BuilderVersion": "0.1.0.7",
   "GoalApiInfo": null,
   "Injections": [],
   "Signature": null,
-  "Hash": "69a3cf6c7b42b5b28f1c4f79aef66f94fd77eb1566abed5f15a9a84fcebb2736"
+  "Hash": "01b50165cf3d0c9b2671a96a14cc59efce81c8f0dceb5d2123dabc157e53972b"
 }

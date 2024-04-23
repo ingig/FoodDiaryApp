@@ -144,9 +144,9 @@
   "RelativeGoalFolderPath": "\\",
   "RelativePrPath": ".build\\Settings\\ChangeMeasurement\\00. Goal.pr",
   "RelativePrFolderPath": ".build\\Settings\\ChangeMeasurement",
-  "BuilderVersion": "0.1.0.6",
+  "BuilderVersion": "0.1.0.7",
   "GoalApiInfo": null,
   "Injections": [],
   "Signature": null,
-  "Hash": "8200d104c8c1b06745a8a55eb008bd90954b37ca92e2266345602b75ee1b2860"
+  "Hash": "4ae60293c420dc00e64a16a21d701bd06aa0690e6e49ed36fcc65fd49456dd90"
 }

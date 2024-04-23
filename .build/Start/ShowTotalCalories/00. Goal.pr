@@ -144,9 +144,9 @@
   "RelativeGoalFolderPath": "\\",
   "RelativePrPath": ".build\\Start\\ShowTotalCalories\\00. Goal.pr",
   "RelativePrFolderPath": ".build\\Start\\ShowTotalCalories",
-  "BuilderVersion": "0.1.0.6",
+  "BuilderVersion": "0.1.0.7",
   "GoalApiInfo": null,
   "Injections": [],
   "Signature": null,
-  "Hash": "4ae6ac2771bbab899e1326ec10e898493fcc4c688fb6903eb046ea95e6abdd17"
+  "Hash": "32444576f8a9e95b2e643bbc0a3ac207b6b048d43bab651f14529bfa3699504e"
 }

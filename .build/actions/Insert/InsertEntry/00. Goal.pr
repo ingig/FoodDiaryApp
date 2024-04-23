@@ -211,9 +211,9 @@
   "RelativeGoalFolderPath": "\\actions",
   "RelativePrPath": ".build\\actions\\Insert\\InsertEntry\\00. Goal.pr",
   "RelativePrFolderPath": ".build\\actions\\Insert\\InsertEntry",
-  "BuilderVersion": "0.1.0.6",
+  "BuilderVersion": "0.1.0.7",
   "GoalApiInfo": null,
   "Injections": [],
   "Signature": null,
-  "Hash": "f067ec03716ee8c67123b396dd8f7cbfc0cc58b4ead9c45b2f9647f53a7a582a"
+  "Hash": "501d81bb482d7b7988ee04d9581c56dfdb124cbae5f8668c120ac86d74e57198"
 }

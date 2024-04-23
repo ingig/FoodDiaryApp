@@ -44,6 +44,7 @@ _If you have OpenAI API key, you can start with the command `plang --llmservice=
 Once started, you can interact with the Food Diary App using a messaging apps [Amethyst (Android)](https://play.google.com/store/apps/details?id=com.vitorpamplona.amethyst&hl=en&gl=US) or [Damus (iPhone)](https://apps.apple.com/us/app/damus/id1628663131). Here’s how to get started:
 
 - **Log an Entry:** Send a message detailing what you ate, e.g., "ate chicken 100g, with broccoli and cauliflower."
+- **Symptoms:** Add symptoms that you have after eating, collecting them and then later ask for relation between food and symptoms
 - **Query Entries:** Ask questions like, "What did I eat yesterday?" or "How many carbs did I consume today?"
 - **Correct Entries:** Send corrections as needed, e.g., "I had 2 sandwiches, not one."
 - **Delete Entries:** To remove entries, send a message like "remove my last entry."
