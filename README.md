@@ -27,7 +27,7 @@ The Food Diary App allows users to log their meals using natural language input 
 > **Heads up: Using Food Diary app costs money**
 > When you add an food diary entry, the app uses an Artificial Intelligence machine to analyse your message and break it down. This cost tiny bit of money, this can be from $0.001 - $0.01. It can even go higher, but usually not. Same applies when you ask questions or chat to the app. The app will guide you on how to buy credit.
 
-1. Download `FoodDiaryApp.zip` from this repository or clone the repository.
+1. Download [`FoodDiaryApp.zip`](https://raw.githubusercontent.com/ingig/FoodDiaryApp/main/FoodDiaryApp.zip) from this repository or clone the repository.
 2. Ensure you have Plang installed on your system. If not, install it from [PLangHQ releases](https://github.com/PLangHQ/plang/releases).
 3. Extract the downloaded zip file and navigate to the extracted directory.
 
