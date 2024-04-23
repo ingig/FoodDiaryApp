@@ -37,3 +37,7 @@ HandleUserInput
         model: 'gpt-3.5-turbo-1106'
         scheme: {goalName:string}
 - call goal %goalName%
+
+ShowTotalCalories
+- select sum(total_calories, 0) from food_entries where date(date)=date('now'), write to %totalCalories%
+- write out 'Total calories for today: %totalCalories%'

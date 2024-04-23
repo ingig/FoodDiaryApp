@@ -1,0 +1,3 @@
+CheckBalance
+- if %__LLM_Balance__% < 5*10^5 then
+    - call goal !SendMessage content='Just wanted to let you know that your balance is now below $0.5, you can purchase credts here %__LLM_PaymentUrl__%'

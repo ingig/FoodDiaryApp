@@ -5,17 +5,57 @@
       {
         "Type": "String",
         "Name": "sql",
-        "Value": "SELECT * FROM food_entries ORDER BY id DESC LIMIT 10"
+        "Value": "SELECT * FROM (SELECT * FROM food_entries ORDER BY id DESC LIMIT 10) AS subquery ORDER BY id"
       }
     ],
     "ReturnValue": [
       {
-        "Type": "System.Collections.Generic.List`1[System.Object]",
-        "VariableName": "foodEntries"
+        "Type": "System.Int64",
+        "VariableName": "id"
+      },
+      {
+        "Type": "System.DateTime",
+        "VariableName": "date"
+      },
+      {
+        "Type": "System.String",
+        "VariableName": "dish_name"
+      },
+      {
+        "Type": "System.String",
+        "VariableName": "user_input"
+      },
+      {
+        "Type": "System.Decimal",
+        "VariableName": "total_weight"
+      },
+      {
+        "Type": "System.String",
+        "VariableName": "ingredients"
+      },
+      {
+        "Type": "System.Decimal",
+        "VariableName": "total_calories"
+      },
+      {
+        "Type": "System.Decimal",
+        "VariableName": "carbs"
+      },
+      {
+        "Type": "System.Decimal",
+        "VariableName": "fat"
+      },
+      {
+        "Type": "System.Decimal",
+        "VariableName": "protein"
+      },
+      {
+        "Type": "System.String",
+        "VariableName": "emojis"
       }
     ]
   },
-  "Text": "select * from food_entries order by id desc limit 10, write to %foodEntries%",
+  "Text": "select * from (select * from food_entries order by id desc limit 10) order by id, write to %foodEntries%",
   "Reload": false,
   "LlmRequest": {
     "temperature": 0.0,
@@ -58,14 +98,14 @@
         "content": [
           {
             "type": "text",
-            "text": "select * from food_entries order by id desc limit 10, write to %foodEntries%"
+            "text": "select * from (select * from food_entries order by id desc limit 10) order by id, write to %foodEntries%"
           }
         ]
       }
     ],
     "model": "gpt-4-turbo",
     "caching": true,
-    "RawResponse": "```json\n{\n  \"FunctionName\": \"Select\",\n  \"Parameters\": [\n    {\n      \"Type\": \"String\",\n      \"Name\": \"sql\",\n      \"Value\": \"SELECT * FROM food_entries ORDER BY id DESC LIMIT 10\"\n    }\n  ],\n  \"ReturnValue\": [\n    {\n      \"Type\": \"System.Collections.Generic.List`1[System.Object]\",\n      \"VariableName\": \"foodEntries\"\n    }\n  ]\n}\n```"
+    "RawResponse": "```json\n{\n  \"FunctionName\": \"Select\",\n  \"Parameters\": [\n    {\n      \"Type\": \"String\",\n      \"Name\": \"sql\",\n      \"Value\": \"SELECT * FROM (SELECT * FROM food_entries ORDER BY id DESC LIMIT 10) AS subquery ORDER BY id\"\n    }\n  ],\n  \"ReturnValue\": [\n    {\n      \"Type\": \"System.Int64\",\n      \"VariableName\": \"id\"\n    },\n    {\n      \"Type\": \"System.DateTime\",\n      \"VariableName\": \"date\"\n    },\n    {\n      \"Type\": \"System.String\",\n      \"VariableName\": \"dish_name\"\n    },\n    {\n      \"Type\": \"System.String\",\n      \"VariableName\": \"user_input\"\n    },\n    {\n      \"Type\": \"System.Decimal\",\n      \"VariableName\": \"total_weight\"\n    },\n    {\n      \"Type\": \"System.String\",\n      \"VariableName\": \"ingredients\"\n    },\n    {\n      \"Type\": \"System.Decimal\",\n      \"VariableName\": \"total_calories\"\n    },\n    {\n      \"Type\": \"System.Decimal\",\n      \"VariableName\": \"carbs\"\n    },\n    {\n      \"Type\": \"System.Decimal\",\n      \"VariableName\": \"fat\"\n    },\n    {\n      \"Type\": \"System.Decimal\",\n      \"VariableName\": \"protein\"\n    },\n    {\n      \"Type\": \"System.String\",\n      \"VariableName\": \"emojis\"\n    }\n  ]\n}\n```"
   },
   "RunOnBuild": false
 }

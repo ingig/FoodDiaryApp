@@ -1,7 +1,7 @@
 Chat
 - write out 'Doing chat'
-- select * from food_entries order by id desc, limit 10, write results into %food_entries%
-- select * from symptoms order by id desc, limit 10, into %symptoms%
+- select * from (select * from food_entries order by id desc, limit 10) order by id, write results into %food_entries%
+- select * from (select * from symptoms order by id desc, limit 10) order by id, into %symptoms%
 - set default value for %chatAssistant% = ""
 - [code] make sure max length of %chatAssistant% is 2000 characters, 
             if it is more, trim from second 'user:'

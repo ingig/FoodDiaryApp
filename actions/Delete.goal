@@ -1,8 +1,7 @@
 Delete
 - write out 'Doing Delete'
-- get all table information from database, write to %tableInfo%
-- select * from food_entries order by id desc limit 10, write to %foodEntries%
-- select * from symptoms order by id desc limit 10, write to %symptoms%
+- select * from (select * from food_entries order by id desc limit 10) order by id, write to variable %foodEntries%
+- select * from (select * from symptoms order by id desc limit 10) order by id, write to %symptoms%
 - read llm/tableInfo.txt, write to %tableInfo%
 - read llm/deleteSystem.txt, write to %deleteSystem%
 - read llm/deleteAssistant.txt, write to %deleteAssistant%, load vars

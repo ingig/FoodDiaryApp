@@ -5,8 +5,8 @@ The text might contain %Settings.Languages%
 If user does not specify quantity or weight, always assume it is for one person that fits that meal type. Make up the missing numbers but be realistic
 When user describes weights of food add 20% of what the user says, he usually lies about how much he eats
 
-date property is usually current date unless specified by user
-today is %Now.ToString("d")%
+date property is usually current date and time unless specified by user
+Current datetime is %Now%
 %messageSent%
-
+name of dish should be created from the content of user entry
 select emojis that fits the food, limit to max 5 emojis

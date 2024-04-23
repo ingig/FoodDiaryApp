@@ -10,12 +10,12 @@
       {
         "Type": "Object",
         "Name": "value",
-        "Value": "This user request was was created on %event.CreatedAt%, take that into account when determining date and time"
+        "Value": "\"This user request was was created on %event.CreatedAt%, take that into account when determining date property\""
       }
     ],
     "ReturnValue": null
   },
-  "Text": "set %messageSent% = \"This user request was was created on %event.CreatedAt%, take that into account when determining date and time\"",
+  "Text": "set %messageSent% = \"This user request was was created on %event.CreatedAt%, take that into account when determining date property\"",
   "Reload": false,
   "LlmRequest": {
     "temperature": 0.0,
@@ -54,14 +54,14 @@
         "content": [
           {
             "type": "text",
-            "text": "set %messageSent% = \"This user request was was created on %event.CreatedAt%, take that into account when determining date and time\""
+            "text": "set %messageSent% = \"This user request was was created on %event.CreatedAt%, take that into account when determining date property\""
           }
         ]
       }
     ],
     "model": "gpt-4-turbo",
     "caching": true,
-    "RawResponse": "{\n  \"FunctionName\": \"SetVariable\",\n  \"Parameters\": [\n    {\n      \"Type\": \"String\",\n      \"Name\": \"key\",\n      \"Value\": \"%messageSent%\"\n    },\n    {\n      \"Type\": \"Object\",\n      \"Name\": \"value\",\n      \"Value\": \"This user request was was created on %event.CreatedAt%, take that into account when determining date and time\"\n    }\n  ]\n}"
+    "RawResponse": "{\n  \"FunctionName\": \"SetVariable\",\n  \"Parameters\": [\n    {\n      \"Type\": \"String\",\n      \"Name\": \"key\",\n      \"Value\": \"%messageSent%\"\n    },\n    {\n      \"Type\": \"Object\",\n      \"Name\": \"value\",\n      \"Value\": \"\\\"This user request was was created on %event.CreatedAt%, take that into account when determining date property\\\"\"\n    }\n  ]\n}"
   },
   "RunOnBuild": false
 }

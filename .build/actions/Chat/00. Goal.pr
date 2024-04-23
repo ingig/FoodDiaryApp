@@ -70,17 +70,17 @@
       }
     },
     {
-      "Text": "select * from food_entries order by id desc, limit 10, write results into %food_entries%",
+      "Text": "select * from (select * from food_entries order by id desc, limit 10) order by id, write results into %food_entries%",
       "Comment": null,
       "ModuleType": "PLang.Modules.DbModule",
-      "Name": "QueryFoodEntries",
-      "Description": "Execute a SQL query to select all records from the 'food_entries' table, order them by 'id' in descending order, limit the results to 10, and store these results into the variable %food_entries%.",
-      "PrFileName": "02. QueryFoodEntries.pr",
-      "RelativePrPath": ".build\\actions\\Chat\\02. QueryFoodEntries.pr",
+      "Name": "QueryAndStoreFoodEntries",
+      "Description": "Execute a SQL query to select the last 10 entries from the 'food_entries' table, ordered by 'id' in descending order, then reorder them by 'id' in ascending order, and store the results in the variable %food_entries%.",
+      "PrFileName": "02. QueryAndStoreFoodEntries.pr",
+      "RelativePrPath": ".build\\actions\\Chat\\02. QueryAndStoreFoodEntries.pr",
       "Indent": 0,
       "Execute": true,
       "RunOnce": false,
-      "Generated": "2024-04-22T12:29:23.5212675+00:00",
+      "Generated": "2024-04-23T09:57:12.6867421+00:00",
       "WaitForExecution": true,
       "ErrorHandler": null,
       "RetryHandler": null,
@@ -126,28 +126,28 @@
             "content": [
               {
                 "type": "text",
-                "text": "select * from food_entries order by id desc, limit 10, write results into %food_entries%"
+                "text": "select * from (select * from food_entries order by id desc, limit 10) order by id, write results into %food_entries%"
               }
             ]
           }
         ],
         "model": "gpt-4-turbo",
         "caching": true,
-        "RawResponse": "{\n  \"StepName\": \"QueryFoodEntries\",\n  \"StepDescription\": \"Execute a SQL query to select all records from the 'food_entries' table, order them by 'id' in descending order, limit the results to 10, and store these results into the variable %food_entries%.\",\n  \"Modules\": [\n    \"PLang.Modules.DbModule\"\n  ],\n  \"WaitForExecution\": true\n}"
+        "RawResponse": "{\n  \"StepName\": \"QueryAndStoreFoodEntries\",\n  \"StepDescription\": \"Execute a SQL query to select the last 10 entries from the 'food_entries' table, ordered by 'id' in descending order, then reorder them by 'id' in ascending order, and store the results in the variable %food_entries%.\",\n  \"Modules\": [\n    \"PLang.Modules.DbModule\"\n  ],\n  \"WaitForExecution\": true\n}"
       }
     },
     {
-      "Text": "select * from symptoms order by id desc, limit 10, into %symptoms%",
+      "Text": "select * from (select * from symptoms order by id desc, limit 10) order by id, into %symptoms%",
       "Comment": null,
       "ModuleType": "PLang.Modules.DbModule",
       "Name": "QuerySymptoms",
-      "Description": "Execute a SQL query to select all records from the 'symptoms' table, order them by 'id' in descending order, limit the results to 10, and store these results into the variable %symptoms%.",
+      "Description": "Execute a SQL query to select the latest 10 records from the 'symptoms' table, ordered by 'id' in descending order, then reorder them by 'id' in ascending order and store the result into the variable %symptoms%.",
       "PrFileName": "03. QuerySymptoms.pr",
       "RelativePrPath": ".build\\actions\\Chat\\03. QuerySymptoms.pr",
       "Indent": 0,
       "Execute": true,
       "RunOnce": false,
-      "Generated": "2024-04-22T12:29:28.9354564+00:00",
+      "Generated": "2024-04-23T09:31:27.6404746+00:00",
       "WaitForExecution": true,
       "ErrorHandler": null,
       "RetryHandler": null,
@@ -193,14 +193,14 @@
             "content": [
               {
                 "type": "text",
-                "text": "select * from symptoms order by id desc, limit 10, into %symptoms%"
+                "text": "select * from (select * from symptoms order by id desc, limit 10) order by id, into %symptoms%"
               }
             ]
           }
         ],
         "model": "gpt-4-turbo",
         "caching": true,
-        "RawResponse": "{\n  \"StepName\": \"QuerySymptoms\",\n  \"StepDescription\": \"Execute a SQL query to select all records from the 'symptoms' table, order them by 'id' in descending order, limit the results to 10, and store these results into the variable %symptoms%.\",\n  \"Modules\": [\n    \"PLang.Modules.DbModule\"\n  ],\n  \"WaitForExecution\": true\n}"
+        "RawResponse": "{\n  \"StepName\": \"QuerySymptoms\",\n  \"StepDescription\": \"Execute a SQL query to select the latest 10 records from the 'symptoms' table, ordered by 'id' in descending order, then reorder them by 'id' in ascending order and store the result into the variable %symptoms%.\",\n  \"Modules\": [\n    \"PLang.Modules.DbModule\"\n  ],\n  \"WaitForExecution\": true\n}"
       }
     },
     {
@@ -751,5 +751,5 @@
   "GoalApiInfo": null,
   "Injections": [],
   "Signature": null,
-  "Hash": "16957d1aa1d776ed182a19c7eee90464957ff8fcc9b30d02b2e20414e9f398fa"
+  "Hash": "f7b42c5db7ba94fa3bb341cd70f06c1f8b7533be479dd5e470292123ca5a5332"
 }

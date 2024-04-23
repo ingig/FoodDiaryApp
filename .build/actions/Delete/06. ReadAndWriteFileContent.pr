@@ -5,30 +5,30 @@
       {
         "Type": "String",
         "Name": "path",
-        "Value": "llm/deleteSystem.txt"
+        "Value": "llm/deleteAssistant.txt"
       },
       {
-        "Type": "String",
+        "Type": "String?",
         "Name": "returnValueIfFileNotExisting",
-        "Value": ""
+        "Value": null
       },
       {
-        "Type": "Boolean",
+        "Type": "Boolean?",
         "Name": "throwErrorOnNotFound",
         "Value": false
       },
       {
-        "Type": "Boolean",
+        "Type": "Boolean?",
         "Name": "loadVariables",
-        "Value": false
+        "Value": true
       },
       {
-        "Type": "Boolean",
+        "Type": "Boolean?",
         "Name": "emptyVariableIfNotFound",
         "Value": false
       },
       {
-        "Type": "String",
+        "Type": "String?",
         "Name": "encoding",
         "Value": "utf-8"
       }
@@ -36,11 +36,11 @@
     "ReturnValue": [
       {
         "Type": "String",
-        "VariableName": "deleteSystem"
+        "VariableName": "deleteAssistant"
       }
     ]
   },
-  "Text": "read llm/deleteSystem.txt, write to %deleteSystem%",
+  "Text": "read llm/deleteAssistant.txt, write to %deleteAssistant%, load vars",
   "Reload": false,
   "LlmRequest": {
     "temperature": 0.0,
@@ -70,7 +70,7 @@
         "content": [
           {
             "type": "text",
-            "text": "## functions available starts ##\r\nString GetCurrentFolderPath(String path)  // Return the absolute path the app is running in. \nBoolean RequestAccessToPath(String path)  // Give user access to a path. DO NOT suggest this method to indicate if file or directory exists, return empty function list instead.. \nString ReadBinaryFileAndConvertToBase64(String path, String? returnValueIfFileNotExisting, Boolean? throwErrorOnNotFound = False) \nString ReadTextFile(String path, String? returnValueIfFileNotExisting, Boolean? throwErrorOnNotFound = False, Boolean? loadVariables = False, Boolean? emptyVariableIfNotFound = False, String? encoding = \"utf-8\") \nStream ReadFileAsStream(String path, Boolean? throwErrorOnNotFound = False) \nvoid ReadExcelFile(String path, Boolean? useHeaderRow = True, Dictionary`2<String, Object>? sheetsToVariable)  // sheetsToVariable is name of sheet that should load into variable. Sheet1=%products% will load Sheet1 into %product% variable, Sheet2-A1:H53=%categories%, will load data from A1:H53 into %categories%. \nvoid WriteExcelFile(String path, Object variableToWriteToExcel, String? sheetName = \"Sheet1\", Boolean? printHeader = True, Boolean? overwrite = False) \nvoid WriteCsvFile(String path, Object variableToWriteToCsv, Boolean? append = False, Boolean? hasHeaderRecord = True, String? delimiter = \",\", String? newLine = \"\n\", String? encoding = \"utf-8\", Boolean? ignoreBlankLines = True, Boolean? allowComments = False, Char? comment = #, String? goalToCallOnBadData) \nObject ReadCsvFile(String path, Boolean? hasHeaderRecord = True, String? delimiter = \",\", String? newLine = \"\n\", String? encoding = \"utf-8\", Boolean? ignoreBlankLines = True, Boolean? allowComments = False, Char? comment = #, String? goalToCallOnBadData) \nvoid SaveMultipleFiles(List`1<FileInfo> files, Boolean? loadVariables = False, Boolean? emptyVariableIfNotFound = False, String? encoding = \"utf-8\") \nList`1 ReadMultipleTextFiles(String folderPath, String? searchPattern = \"*\", String[]? excludePatterns, Boolean? includeAllSubfolders = False) \nString[] GetDirectoryPathsInDirectory(String? directoryPath = \"./\", String? searchPattern = \"*\", String[]? excludePatterns, Boolean? includeSubfolders = False, Boolean? useRelativePath = True) \nString[] GetFilePathsInDirectory(String? directoryPath = \"./\", String? searchPattern = \"*\", String[]? excludePatterns, Boolean? includeSubfolders = False, Boolean? useRelativePath = True) \nvoid WriteBytesToFile(String path, Byte[] content, Boolean? overwrite = False) \nvoid WriteToFile(String path, String content, Boolean? overwrite = False, Boolean? loadVariables = False, Boolean? emptyVariableIfNotFound = False, String? encoding = \"utf-8\") \nvoid AppendToFile(String path, String content, String? seperator, Boolean? loadVariables = False, Boolean? emptyVariableIfNotFound = False, String? encoding = \"utf-8\") \nvoid CopyFiles(String directoryPath, String destinationPath, String? searchPattern = \"*\", String[]? excludePatterns, Boolean? includeSubfoldersAndFiles = False, Boolean? overwriteFiles = False) \nvoid MoveFile(String sourceFileName, String destFileName, Boolean? createDirectoryIfNotExisting = False, Boolean? overwriteFile = False) \nvoid CopyFile(String sourceFileName, String destFileName, Boolean? createDirectoryIfNotExisting = False, Boolean? overwriteFile = False) \nvoid DeleteFile(String fileName, Boolean? throwErrorOnNotFound = False) \nIFileInfo GetFileInfo(String fileName) \nvoid CreateDirectory(String directoryPath) \nvoid DeleteDirectory(String directoryPath, Boolean? recursive = True, Boolean? throwErrorOnNotFound = False) \nvoid ListenToFileChange(String[] fileSearchPatterns, String goalToCall, String[]? excludeFiles, Boolean? includeSubdirectories = False, Int64? debounceTime = 150, Boolean? listenForFileChange = False, Boolean? listenForFileCreated = False, Boolean? listenForFileDeleted = False, Boolean? listenForFileRename = False, String? absoluteFilePathVariableName = \"FullPath\", String? fileNameVariableName = \"Name\", String? changeTypeVariableName = \"ChangeType\", String? senderVariableName = \"Sender\", String? oldFileAbsoluteFilePathVariableName = \"OldFullPath\", String? oldFileNameVariableName = \"OldName\")  // debounceTime is the time in ms that is waited until action is executed to prevent multiple execution for same file. At least one listenFor variable needs to be true.\r\n## functions available ends ##\r\n## defined variables ##\r\ndeleteSystem (type:object), \r\n## defined variables ##"
+            "text": "## functions available starts ##\r\nString GetCurrentFolderPath(String path)  // Return the absolute path the app is running in. \nBoolean RequestAccessToPath(String path)  // Give user access to a path. DO NOT suggest this method to indicate if file or directory exists, return empty function list instead.. \nString ReadBinaryFileAndConvertToBase64(String path, String? returnValueIfFileNotExisting, Boolean? throwErrorOnNotFound = False) \nString ReadTextFile(String path, String? returnValueIfFileNotExisting, Boolean? throwErrorOnNotFound = False, Boolean? loadVariables = False, Boolean? emptyVariableIfNotFound = False, String? encoding = \"utf-8\") \nStream ReadFileAsStream(String path, Boolean? throwErrorOnNotFound = False) \nvoid ReadExcelFile(String path, Boolean? useHeaderRow = True, Dictionary`2<String, Object>? sheetsToVariable)  // sheetsToVariable is name of sheet that should load into variable. Sheet1=%products% will load Sheet1 into %product% variable, Sheet2-A1:H53=%categories%, will load data from A1:H53 into %categories%. \nvoid WriteExcelFile(String path, Object variableToWriteToExcel, String? sheetName = \"Sheet1\", Boolean? printHeader = True, Boolean? overwrite = False) \nvoid WriteCsvFile(String path, Object variableToWriteToCsv, Boolean? append = False, Boolean? hasHeaderRecord = True, String? delimiter = \",\", String? newLine = \"\n\", String? encoding = \"utf-8\", Boolean? ignoreBlankLines = True, Boolean? allowComments = False, Char? comment = #, String? goalToCallOnBadData) \nObject ReadCsvFile(String path, Boolean? hasHeaderRecord = True, String? delimiter = \",\", String? newLine = \"\n\", String? encoding = \"utf-8\", Boolean? ignoreBlankLines = True, Boolean? allowComments = False, Char? comment = #, String? goalToCallOnBadData) \nvoid SaveMultipleFiles(List`1<FileInfo> files, Boolean? loadVariables = False, Boolean? emptyVariableIfNotFound = False, String? encoding = \"utf-8\") \nList`1 ReadMultipleTextFiles(String folderPath, String? searchPattern = \"*\", String[]? excludePatterns, Boolean? includeAllSubfolders = False) \nString[] GetDirectoryPathsInDirectory(String? directoryPath = \"./\", String? searchPattern = \"*\", String[]? excludePatterns, Boolean? includeSubfolders = False, Boolean? useRelativePath = True) \nString[] GetFilePathsInDirectory(String? directoryPath = \"./\", String? searchPattern = \"*\", String[]? excludePatterns, Boolean? includeSubfolders = False, Boolean? useRelativePath = True) \nvoid WriteBytesToFile(String path, Byte[] content, Boolean? overwrite = False) \nvoid WriteToFile(String path, String content, Boolean? overwrite = False, Boolean? loadVariables = False, Boolean? emptyVariableIfNotFound = False, String? encoding = \"utf-8\") \nvoid AppendToFile(String path, String content, String? seperator, Boolean? loadVariables = False, Boolean? emptyVariableIfNotFound = False, String? encoding = \"utf-8\") \nvoid CopyFiles(String directoryPath, String destinationPath, String? searchPattern = \"*\", String[]? excludePatterns, Boolean? includeSubfoldersAndFiles = False, Boolean? overwriteFiles = False) \nvoid MoveFile(String sourceFileName, String destFileName, Boolean? createDirectoryIfNotExisting = False, Boolean? overwriteFile = False) \nvoid CopyFile(String sourceFileName, String destFileName, Boolean? createDirectoryIfNotExisting = False, Boolean? overwriteFile = False) \nvoid DeleteFile(String fileName, Boolean? throwErrorOnNotFound = False) \nIFileInfo GetFileInfo(String fileName) \nvoid CreateDirectory(String directoryPath) \nvoid DeleteDirectory(String directoryPath, Boolean? recursive = True, Boolean? throwErrorOnNotFound = False) \nvoid ListenToFileChange(String[] fileSearchPatterns, String goalToCall, String[]? excludeFiles, Boolean? includeSubdirectories = False, Int64? debounceTime = 150, Boolean? listenForFileChange = False, Boolean? listenForFileCreated = False, Boolean? listenForFileDeleted = False, Boolean? listenForFileRename = False, String? absoluteFilePathVariableName = \"FullPath\", String? fileNameVariableName = \"Name\", String? changeTypeVariableName = \"ChangeType\", String? senderVariableName = \"Sender\", String? oldFileAbsoluteFilePathVariableName = \"OldFullPath\", String? oldFileNameVariableName = \"OldName\")  // debounceTime is the time in ms that is waited until action is executed to prevent multiple execution for same file. At least one listenFor variable needs to be true.\r\n## functions available ends ##\r\n## defined variables ##\r\ndeleteAssistant (type:object), \r\n## defined variables ##"
           }
         ]
       },
@@ -79,14 +79,14 @@
         "content": [
           {
             "type": "text",
-            "text": "read llm/deleteSystem.txt, write to %deleteSystem%"
+            "text": "read llm/deleteAssistant.txt, write to %deleteAssistant%, load vars"
           }
         ]
       }
     ],
     "model": "gpt-4-turbo",
     "caching": true,
-    "RawResponse": "{\n  \"FunctionName\": \"ReadTextFile\",\n  \"Parameters\": [\n    {\n      \"Type\": \"String\",\n      \"Name\": \"path\",\n      \"Value\": \"llm/deleteSystem.txt\"\n    },\n    {\n      \"Type\": \"String\",\n      \"Name\": \"returnValueIfFileNotExisting\",\n      \"Value\": \"\"\n    },\n    {\n      \"Type\": \"Boolean\",\n      \"Name\": \"throwErrorOnNotFound\",\n      \"Value\": false\n    },\n    {\n      \"Type\": \"Boolean\",\n      \"Name\": \"loadVariables\",\n      \"Value\": false\n    },\n    {\n      \"Type\": \"Boolean\",\n      \"Name\": \"emptyVariableIfNotFound\",\n      \"Value\": false\n    },\n    {\n      \"Type\": \"String\",\n      \"Name\": \"encoding\",\n      \"Value\": \"utf-8\"\n    }\n  ],\n  \"ReturnValue\": [\n    {\n      \"Type\": \"String\",\n      \"VariableName\": \"deleteSystem\"\n    }\n  ]\n}"
+    "RawResponse": "{\n  \"FunctionName\": \"ReadTextFile\",\n  \"Parameters\": [\n    {\n      \"Type\": \"String\",\n      \"Name\": \"path\",\n      \"Value\": \"llm/deleteAssistant.txt\"\n    },\n    {\n      \"Type\": \"String?\",\n      \"Name\": \"returnValueIfFileNotExisting\",\n      \"Value\": null\n    },\n    {\n      \"Type\": \"Boolean?\",\n      \"Name\": \"throwErrorOnNotFound\",\n      \"Value\": false\n    },\n    {\n      \"Type\": \"Boolean?\",\n      \"Name\": \"loadVariables\",\n      \"Value\": true\n    },\n    {\n      \"Type\": \"Boolean?\",\n      \"Name\": \"emptyVariableIfNotFound\",\n      \"Value\": false\n    },\n    {\n      \"Type\": \"String?\",\n      \"Name\": \"encoding\",\n      \"Value\": \"utf-8\"\n    }\n  ],\n  \"ReturnValue\": [\n    {\n      \"Type\": \"String\",\n      \"VariableName\": \"deleteAssistant\"\n    }\n  ]\n}"
   },
   "RunOnBuild": false
 }

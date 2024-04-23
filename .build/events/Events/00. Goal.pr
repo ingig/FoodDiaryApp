@@ -71,6 +71,76 @@
       "Number": 2,
       "LineNumber": 3,
       "LlmRequest": null
+    },
+    {
+      "Text": "before goal 'Start', call !CheckBalance",
+      "Comment": null,
+      "ModuleType": null,
+      "Name": null,
+      "Description": null,
+      "PrFileName": null,
+      "RelativePrPath": null,
+      "Indent": 0,
+      "Execute": true,
+      "RunOnce": false,
+      "Generated": "2024-04-23T09:47:18.4282147+00:00",
+      "WaitForExecution": true,
+      "ErrorHandler": null,
+      "RetryHandler": null,
+      "CacheHandler": null,
+      "CancellationHandler": null,
+      "Custom": {
+        "Event": {
+          "EventType": "Before",
+          "EventScope": "Goal",
+          "GoalToBindTo": "^Start$",
+          "GoalToCall": "!CheckBalance",
+          "IncludePrivate": false,
+          "StepNumber": null,
+          "StepText": null,
+          "WaitForExecution": true,
+          "RunOnlyInDebugMode": false,
+          "OnErrorContinueNextStep": false
+        }
+      },
+      "Number": 3,
+      "LineNumber": 4,
+      "LlmRequest": null
+    },
+    {
+      "Text": "on error , call !HandleError",
+      "Comment": null,
+      "ModuleType": null,
+      "Name": null,
+      "Description": null,
+      "PrFileName": null,
+      "RelativePrPath": null,
+      "Indent": 0,
+      "Execute": true,
+      "RunOnce": false,
+      "Generated": "2024-04-23T10:11:34.695747+00:00",
+      "WaitForExecution": true,
+      "ErrorHandler": null,
+      "RetryHandler": null,
+      "CacheHandler": null,
+      "CancellationHandler": null,
+      "Custom": {
+        "Event": {
+          "EventType": "Before",
+          "EventScope": "StepError",
+          "GoalToBindTo": ".*",
+          "GoalToCall": "!HandleError",
+          "IncludePrivate": false,
+          "StepNumber": null,
+          "StepText": null,
+          "WaitForExecution": true,
+          "RunOnlyInDebugMode": false,
+          "OnErrorContinueNextStep": false
+        }
+      },
+      "Number": 4,
+      "LineNumber": 5,
+      "LlmRequest": null
     }
   ],
   "Description": null,

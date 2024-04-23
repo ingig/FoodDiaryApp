@@ -1,21 +1,21 @@
 {
   "Action": {
-    "FunctionName": "Select",
+    "FunctionName": "SelectOneRow",
     "Parameters": [
       {
         "Type": "String",
         "Name": "sql",
-        "Value": "SELECT * FROM food_entries ORDER BY id DESC LIMIT 10"
+        "Value": "SELECT COALESCE(SUM(total_calories), 0) FROM food_entries WHERE date(date) = date('now')"
       }
     ],
     "ReturnValue": [
       {
-        "Type": "System.Collections.Generic.List<System.Object>",
-        "VariableName": "food_entries"
+        "Type": "System.Double",
+        "VariableName": "totalCalories"
       }
     ]
   },
-  "Text": "select * from food_entries order by id desc, limit 10, write results into %food_entries%",
+  "Text": "select sum(total_calories, 0) from food_entries where date(date)=date('now'), write to %totalCalories%",
   "Reload": false,
   "LlmRequest": {
     "temperature": 0.0,
@@ -58,14 +58,14 @@
         "content": [
           {
             "type": "text",
-            "text": "select * from food_entries order by id desc, limit 10, write results into %food_entries%"
+            "text": "select sum(total_calories, 0) from food_entries where date(date)=date('now'), write to %totalCalories%"
           }
         ]
       }
     ],
     "model": "gpt-4-turbo",
     "caching": true,
-    "RawResponse": "```json\n{\n  \"FunctionName\": \"Select\",\n  \"Parameters\": [\n    {\n      \"Type\": \"String\",\n      \"Name\": \"sql\",\n      \"Value\": \"SELECT * FROM food_entries ORDER BY id DESC LIMIT 10\"\n    }\n  ],\n  \"ReturnValue\": [\n    {\n      \"Type\": \"System.Collections.Generic.List<System.Object>\",\n      \"VariableName\": \"food_entries\"\n    }\n  ]\n}\n```"
+    "RawResponse": "```json\n{\n  \"FunctionName\": \"SelectOneRow\",\n  \"Parameters\": [\n    {\n      \"Type\": \"String\",\n      \"Name\": \"sql\",\n      \"Value\": \"SELECT COALESCE(SUM(total_calories), 0) FROM food_entries WHERE date(date) = date('now')\"\n    }\n  ],\n  \"ReturnValue\": [\n    {\n      \"Type\": \"System.Double\",\n      \"VariableName\": \"totalCalories\"\n    }\n  ]\n}\n```"
   },
   "RunOnBuild": false
 }

@@ -20,7 +20,7 @@
     ],
     "ReturnValue": null
   },
-  "Text": "call !Start",
+  "Text": "call goal !Start",
   "Reload": false,
   "LlmRequest": {
     "temperature": 0.0,
@@ -63,14 +63,14 @@
         "content": [
           {
             "type": "text",
-            "text": "call !Start"
+            "text": "call goal !Start"
           }
         ]
       }
     ],
     "model": "gpt-4-turbo",
     "caching": true,
-    "RawResponse": null
+    "RawResponse": "{\n  \"FunctionName\": \"RunGoal\",\n  \"Parameters\": [\n    {\n      \"Type\": \"String\",\n      \"Name\": \"goalName\",\n      \"Value\": \"!Start\"\n    },\n    {\n      \"Type\": \"Dictionary`2<String, Object>\",\n      \"Name\": \"parameters\",\n      \"Value\": null\n    },\n    {\n      \"Type\": \"Boolean?\",\n      \"Name\": \"waitForExecution\",\n      \"Value\": true\n    }\n  ],\n  \"ReturnValue\": null\n}"
   },
   "RunOnBuild": false
 }

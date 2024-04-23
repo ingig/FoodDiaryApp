@@ -5,17 +5,17 @@
       {
         "Type": "String",
         "Name": "sql",
-        "Value": "SELECT * FROM symptoms ORDER BY id DESC LIMIT 10"
+        "Value": "SELECT * FROM (SELECT * FROM symptoms ORDER BY id DESC LIMIT 10) AS subquery ORDER BY id"
       }
     ],
     "ReturnValue": [
       {
-        "Type": "System.Collections.Generic.List<System.Object>",
+        "Type": "System.Object",
         "VariableName": "symptoms"
       }
     ]
   },
-  "Text": "select * from symptoms order by id desc limit 10, write to %symptoms%",
+  "Text": "select * from (select * from symptoms order by id desc limit 10) order by id, write to %symptoms%",
   "Reload": false,
   "LlmRequest": {
     "temperature": 0.0,
@@ -58,14 +58,14 @@
         "content": [
           {
             "type": "text",
-            "text": "select * from symptoms order by id desc limit 10, write to %symptoms%"
+            "text": "select * from (select * from symptoms order by id desc limit 10) order by id, write to %symptoms%"
           }
         ]
       }
     ],
     "model": "gpt-4-turbo",
     "caching": true,
-    "RawResponse": "```json\n{\n  \"FunctionName\": \"Select\",\n  \"Parameters\": [\n    {\n      \"Type\": \"String\",\n      \"Name\": \"sql\",\n      \"Value\": \"SELECT * FROM symptoms ORDER BY id DESC LIMIT 10\"\n    }\n  ],\n  \"ReturnValue\": [\n    {\n      \"Type\": \"System.Collections.Generic.List<System.Object>\",\n      \"VariableName\": \"symptoms\"\n    }\n  ]\n}\n```"
+    "RawResponse": "```json\n{\n  \"FunctionName\": \"Select\",\n  \"Parameters\": [\n    {\n      \"Type\": \"String\",\n      \"Name\": \"sql\",\n      \"Value\": \"SELECT * FROM (SELECT * FROM symptoms ORDER BY id DESC LIMIT 10) AS subquery ORDER BY id\"\n    }\n  ],\n  \"ReturnValue\": [\n    {\n      \"Type\": \"System.Object\",\n      \"VariableName\": \"symptoms\"\n    }\n  ]\n}\n```"
   },
   "RunOnBuild": false
 }
