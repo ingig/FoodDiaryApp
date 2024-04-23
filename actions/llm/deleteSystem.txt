@@ -4,4 +4,4 @@ Generate the DELETE sql statement
 Generate short explaination of what was updated in plain english, include the name of the dish deleted.
 Do not mention SQL since the explaination is for non-tech people.
 
-Note that Last 10 records in food_entries table are in reverse order, latest record is first.
+When user states something like, 'remove my last entry', it means that he wants to remove the last entry he added to the database, so the newest entry.

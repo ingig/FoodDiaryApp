@@ -27,7 +27,7 @@ ListenToMessages
 HandleMessage
 - if %userInput% is not empty then 
     - set %IsMessage%=true
-    - call !HandleUserInput
+    - call !HandleUserInput, on error call !Start
     - set %IsMessage%=false
 
 HandleUserInput

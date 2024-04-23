@@ -137,19 +137,25 @@
       }
     },
     {
-      "Text": "call !HandleUserInput",
+      "Text": "call !HandleUserInput, on error call !Start",
       "Comment": null,
       "ModuleType": "PLang.Modules.CallGoalModule",
       "Name": "CallHandleUserInput",
-      "Description": "Call the goal named 'HandleUserInput' to process user input.",
+      "Description": "Call the function 'HandleUserInput'. If an error occurs, call the function 'Start'.",
       "PrFileName": "03. CallHandleUserInput.pr",
       "RelativePrPath": ".build\\Start\\HandleMessage\\03. CallHandleUserInput.pr",
       "Indent": 4,
       "Execute": false,
       "RunOnce": false,
-      "Generated": "2024-04-19T11:20:37.0310236+00:00",
+      "Generated": "2024-04-23T10:59:49.4514527+00:00",
       "WaitForExecution": true,
-      "ErrorHandler": null,
+      "ErrorHandler": {
+        "IgnoreErrors": false,
+        "OnExceptionContainingTextCallGoal": {
+          "*": "!Start"
+        },
+        "ContinueToNextStep": false
+      },
       "RetryHandler": null,
       "CacheHandler": null,
       "CancellationHandler": null,
@@ -193,14 +199,14 @@
             "content": [
               {
                 "type": "text",
-                "text": "call !HandleUserInput"
+                "text": "call !HandleUserInput, on error call !Start"
               }
             ]
           }
         ],
         "model": "gpt-4-turbo",
         "caching": true,
-        "RawResponse": null
+        "RawResponse": "{\n  \"StepName\": \"CallHandleUserInput\",\n  \"StepDescription\": \"Call the function 'HandleUserInput'. If an error occurs, call the function 'Start'.\",\n  \"Modules\": [\n    \"PLang.Modules.CallGoalModule\"\n  ],\n  \"WaitForExecution\": true,\n  \"ErrorHandler\": {\n    \"IgnoreErrors\": false,\n    \"OnExceptionContainingTextCallGoal\": {\n      \"*\": \"!Start\"\n    },\n    \"ContinueToNextStep\": false\n  }\n}"
       }
     },
     {
@@ -282,5 +288,5 @@
   "GoalApiInfo": null,
   "Injections": [],
   "Signature": null,
-  "Hash": "8b673217ea95f4ced3b92aee1f9245ec635bcc12ffa12bc2c324c3d022503244"
+  "Hash": "6601a52401f471170e4b1665168ec6abe6881359e921b3a1ff81a06171374663"
 }
