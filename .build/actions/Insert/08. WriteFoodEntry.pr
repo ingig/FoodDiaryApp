@@ -3,7 +3,7 @@
     "FunctionName": "AskLlm",
     "Parameters": [
       {
-        "Type": "List<LlmMessage>",
+        "Type": "List`1[LlmMessage]",
         "Name": "promptMessages",
         "Value": [
           {
@@ -33,18 +33,23 @@
       },
       {
         "Type": "String",
-        "Name": "loggerLevel",
-        "Value": "warning"
+        "Name": "model",
+        "Value": "gpt-4-turbo"
+      },
+      {
+        "Type": "String",
+        "Name": "llmResponseType",
+        "Value": "json"
       }
     ],
     "ReturnValue": [
       {
-        "Type": "object",
-        "VariableName": "%foodEntry%"
+        "Type": "String",
+        "VariableName": "foodEntry"
       }
     ]
   },
-  "Text": "[llm] system: %insertSystem%\n    user: %userInput%\n    scheme: {\"date\": datetime, \"dish\": {\"name\": string, \"totalWeight\": number, \"ingredients\": [{\"name\": string, \"quantity\": number, \"calories\": number, \"carbs\":number,\"fat\":number,\"protein\":number}], \"totalCarbs\":number,\"totalFat\":number,\"totalProtein\":number, \"totalCalories\": number}, \"emojis\": string}\n    log level: warning\n    write to %foodEntry%",
+  "Text": "[llm] system: %insertSystem%\n    user: %userInput%\n    scheme: {\"date\": datetime, \"dish\": {\"name\": string, \"totalWeight\": number, \"ingredients\": [{\"name\": string, \"quantity\": number, \"calories\": number, \"carbs\":number,\"fat\":number,\"protein\":number}], \"totalCarbs\":number,\"totalFat\":number,\"totalProtein\":number, \"totalCalories\": number}, \"emojis\": string}\n    write to %foodEntry%",
   "Reload": false,
   "LlmRequest": {
     "temperature": 0.0,
@@ -87,14 +92,14 @@
         "content": [
           {
             "type": "text",
-            "text": "[llm] system: %insertSystem%\n    user: %userInput%\n    scheme: {\"date\": datetime, \"dish\": {\"name\": string, \"totalWeight\": number, \"ingredients\": [{\"name\": string, \"quantity\": number, \"calories\": number, \"carbs\":number,\"fat\":number,\"protein\":number}], \"totalCarbs\":number,\"totalFat\":number,\"totalProtein\":number, \"totalCalories\": number}, \"emojis\": string}\n    log level: warning\n    write to %foodEntry%"
+            "text": "[llm] system: %insertSystem%\n    user: %userInput%\n    scheme: {\"date\": datetime, \"dish\": {\"name\": string, \"totalWeight\": number, \"ingredients\": [{\"name\": string, \"quantity\": number, \"calories\": number, \"carbs\":number,\"fat\":number,\"protein\":number}], \"totalCarbs\":number,\"totalFat\":number,\"totalProtein\":number, \"totalCalories\": number}, \"emojis\": string}\n    write to %foodEntry%"
           }
         ]
       }
     ],
     "model": "gpt-4-turbo",
     "caching": true,
-    "RawResponse": "{\n  \"FunctionName\": \"AskLlm\",\n  \"Parameters\": [\n    {\n      \"Type\": \"List<LlmMessage>\",\n      \"Name\": \"promptMessages\",\n      \"Value\": [\n        {\n          \"role\": \"system\",\n          \"content\": [\n            {\n              \"type\": \"text\",\n              \"text\": \"%insertSystem%\"\n            }\n          ]\n        },\n        {\n          \"role\": \"user\",\n          \"content\": [\n            {\n              \"type\": \"text\",\n              \"text\": \"%userInput%\"\n            }\n          ]\n        }\n      ]\n    },\n    {\n      \"Type\": \"String\",\n      \"Name\": \"scheme\",\n      \"Value\": \"{\\\"date\\\": \\\"datetime\\\", \\\"dish\\\": {\\\"name\\\": \\\"string\\\", \\\"totalWeight\\\": \\\"number\\\", \\\"ingredients\\\": [{\\\"name\\\": \\\"string\\\", \\\"quantity\\\": \\\"number\\\", \\\"calories\\\": \\\"number\\\", \\\"carbs\\\":\\\"number\\\",\\\"fat\\\":\\\"number\\\",\\\"protein\\\":\\\"number\\\"}], \\\"totalCarbs\\\":\\\"number\\\",\\\"totalFat\\\":\\\"number\\\",\\\"totalProtein\\\":\\\"number\\\", \\\"totalCalories\\\": \\\"number\\\"}, \\\"emojis\\\": \\\"string\\\"}\"\n    },\n    {\n      \"Type\": \"String\",\n      \"Name\": \"loggerLevel\",\n      \"Value\": \"warning\"\n    }\n  ],\n  \"ReturnValue\": [\n    {\n      \"Type\": \"object\",\n      \"VariableName\": \"%foodEntry%\"\n    }\n  ]\n}"
+    "RawResponse": "{\n  \"FunctionName\": \"AskLlm\",\n  \"Parameters\": [\n    {\n      \"Type\": \"List`1[LlmMessage]\",\n      \"Name\": \"promptMessages\",\n      \"Value\": [\n        {\n          \"role\": \"system\",\n          \"content\": [\n            {\n              \"type\": \"text\",\n              \"text\": \"%insertSystem%\"\n            }\n          ]\n        },\n        {\n          \"role\": \"user\",\n          \"content\": [\n            {\n              \"type\": \"text\",\n              \"text\": \"%userInput%\"\n            }\n          ]\n        }\n      ]\n    },\n    {\n      \"Type\": \"String\",\n      \"Name\": \"scheme\",\n      \"Value\": \"{\\\"date\\\": \\\"datetime\\\", \\\"dish\\\": {\\\"name\\\": \\\"string\\\", \\\"totalWeight\\\": \\\"number\\\", \\\"ingredients\\\": [{\\\"name\\\": \\\"string\\\", \\\"quantity\\\": \\\"number\\\", \\\"calories\\\": \\\"number\\\", \\\"carbs\\\":\\\"number\\\",\\\"fat\\\":\\\"number\\\",\\\"protein\\\":\\\"number\\\"}], \\\"totalCarbs\\\":\\\"number\\\",\\\"totalFat\\\":\\\"number\\\",\\\"totalProtein\\\":\\\"number\\\", \\\"totalCalories\\\": \\\"number\\\"}, \\\"emojis\\\": \\\"string\\\"}\"\n    },\n    {\n      \"Type\": \"String\",\n      \"Name\": \"model\",\n      \"Value\": \"gpt-4-turbo\"\n    },\n    {\n      \"Type\": \"String\",\n      \"Name\": \"llmResponseType\",\n      \"Value\": \"json\"\n    }\n  ],\n  \"ReturnValue\": [\n    {\n      \"Type\": \"String\",\n      \"VariableName\": \"foodEntry\"\n    }\n  ]\n}"
   },
   "RunOnBuild": false
 }

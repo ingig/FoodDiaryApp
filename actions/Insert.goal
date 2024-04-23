@@ -9,7 +9,6 @@
 - [llm] system: %insertSystem%
     user: %userInput%
     scheme: {"date": datetime, "dish": {"name": string, "totalWeight": number, "ingredients": [{"name": string, "quantity": number, "calories": number, "carbs":number,"fat":number,"protein":number}], "totalCarbs":number,"totalFat":number,"totalProtein":number, "totalCalories": number}, "emojis": string}
-    log level: warning
     write to %foodEntry%
 - if %foodEntry.dish.totalCalories% = 0, call Chat, call InsertEntry
 

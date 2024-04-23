@@ -472,17 +472,17 @@
       }
     },
     {
-      "Text": "[llm] system: %insertSystem%\n    user: %userInput%\n    scheme: {\"date\": datetime, \"dish\": {\"name\": string, \"totalWeight\": number, \"ingredients\": [{\"name\": string, \"quantity\": number, \"calories\": number, \"carbs\":number,\"fat\":number,\"protein\":number}], \"totalCarbs\":number,\"totalFat\":number,\"totalProtein\":number, \"totalCalories\": number}, \"emojis\": string}\n    log level: warning\n    write to %foodEntry%",
+      "Text": "[llm] system: %insertSystem%\n    user: %userInput%\n    scheme: {\"date\": datetime, \"dish\": {\"name\": string, \"totalWeight\": number, \"ingredients\": [{\"name\": string, \"quantity\": number, \"calories\": number, \"carbs\":number,\"fat\":number,\"protein\":number}], \"totalCarbs\":number,\"totalFat\":number,\"totalProtein\":number, \"totalCalories\": number}, \"emojis\": string}\n    write to %foodEntry%",
       "Comment": null,
       "ModuleType": "PLang.Modules.LlmModule",
-      "Name": "LogFoodEntry",
-      "Description": "Use the LlmModule to log a food entry with details such as date, dish information, and emojis into the specified system. The entry is written to a designated file or database.",
-      "PrFileName": "08. LogFoodEntry.pr",
-      "RelativePrPath": ".build\\actions\\Insert\\08. LogFoodEntry.pr",
+      "Name": "WriteFoodEntry",
+      "Description": "Write the food entry details including date, dish information, and emojis into the specified file or database location defined by %foodEntry%.",
+      "PrFileName": "08. WriteFoodEntry.pr",
+      "RelativePrPath": ".build\\actions\\Insert\\08. WriteFoodEntry.pr",
       "Indent": 0,
       "Execute": true,
       "RunOnce": false,
-      "Generated": "2024-04-22T11:23:05.9192117+00:00",
+      "Generated": "2024-04-23T12:02:09.3433581+00:00",
       "WaitForExecution": true,
       "ErrorHandler": null,
       "RetryHandler": null,
@@ -528,14 +528,14 @@
             "content": [
               {
                 "type": "text",
-                "text": "[llm] system: %insertSystem%\n    user: %userInput%\n    scheme: {\"date\": datetime, \"dish\": {\"name\": string, \"totalWeight\": number, \"ingredients\": [{\"name\": string, \"quantity\": number, \"calories\": number, \"carbs\":number,\"fat\":number,\"protein\":number}], \"totalCarbs\":number,\"totalFat\":number,\"totalProtein\":number, \"totalCalories\": number}, \"emojis\": string}\n    log level: warning\n    write to %foodEntry%"
+                "text": "[llm] system: %insertSystem%\n    user: %userInput%\n    scheme: {\"date\": datetime, \"dish\": {\"name\": string, \"totalWeight\": number, \"ingredients\": [{\"name\": string, \"quantity\": number, \"calories\": number, \"carbs\":number,\"fat\":number,\"protein\":number}], \"totalCarbs\":number,\"totalFat\":number,\"totalProtein\":number, \"totalCalories\": number}, \"emojis\": string}\n    write to %foodEntry%"
               }
             ]
           }
         ],
         "model": "gpt-4-turbo",
         "caching": true,
-        "RawResponse": "{\n  \"StepName\": \"LogFoodEntry\",\n  \"StepDescription\": \"Use the LlmModule to log a food entry with details such as date, dish information, and emojis into the specified system. The entry is written to a designated file or database.\",\n  \"Modules\": [\n    \"PLang.Modules.LlmModule\"\n  ],\n  \"WaitForExecution\": true\n}"
+        "RawResponse": "{\n  \"StepName\": \"WriteFoodEntry\",\n  \"StepDescription\": \"Write the food entry details including date, dish information, and emojis into the specified file or database location defined by %foodEntry%.\",\n  \"Modules\": [\n    \"PLang.Modules.LlmModule\"\n  ],\n  \"WaitForExecution\": true\n}"
       }
     },
     {
@@ -557,7 +557,7 @@
       "CancellationHandler": null,
       "Custom": {},
       "Number": 8,
-      "LineNumber": 14,
+      "LineNumber": 13,
       "LlmRequest": {
         "temperature": 0.0,
         "top_p": 0.0,
@@ -617,5 +617,5 @@
   "GoalApiInfo": null,
   "Injections": [],
   "Signature": null,
-  "Hash": "fb2747831bb238df4faa5598f524b4fdbdf5513703cdf69b990594ef6ae4b517"
+  "Hash": "9d0ee16d15cd3208b7ef378ea4626cb1675a43d119741d643749ddc2da3f77ad"
 }
