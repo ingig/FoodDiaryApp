@@ -1,0 +1,5 @@
+Select
+- call GetKnowledge
+- foreach %knowledge% call !CreateKnowledgeText
+- append to %output% = "This is my knowledge:
+    %knowledgeText%"

@@ -1,0 +1,6 @@
+=== Database structure ===
+%tableInfo%
+=== Database structure ===
+=== Last 10 records in knowledge table ===
+%knowledge%
+=== Last 10 records in knowledge table  ===

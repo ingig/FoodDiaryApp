@@ -7,4 +7,6 @@
     food_entry_id(foreign key to food_entries)
     description(string, not null)
     created(datetime, default current date)
-    
+- create table knowledge, columns: info(string), created(datetime, now)
+- add columns to food_entries
+    fiber(number), net_carbs(number)

@@ -1,0 +1,13 @@
+Update
+- write out 'Doing Update'
+- select * from (select * from food_entries order by id desc limit 10) order by id, write to %foodEntries%
+- read llm/tableInfo.txt, write to %tableInfo%
+- read llm/updateSystem.txt, write to %updateSystem%
+- read llm/updateAssistant.txt, write to %updateAssistant%, load vars
+- [llm] system:%updateSystem%
+        assistant: %updateAssistant%
+        user: %userInput%
+        scheme: {explain:string, sql:string}
+- write out '%sql% - %explain%'
+- execute sql update, sql=%sql%
+- append to %output% = %explain%

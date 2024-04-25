@@ -1,0 +1,15 @@
+User just added a knowledge to the system
+
+%systemSettings%
+
+=== last food_entries === 
+%foodEntries%
+=== last food_entries === 
+=== table info for food_entries ===
+Table: food_entries 
+Columns: (id BIGINT PRIMARY KEY, date TIMESTAMP NOT NULL, dish_name TEXT NOT NULL, total_weight NUMERIC, ingredients JSON, total_calories NUMERIC, emojis TEXT, carbs NUMERIC, fat NUMERIC, protein NUMERIC);
+=== table info for food_entries ===
+
+Give short explaination of your change, do not mention SQL as this is for non tech person, be concise
+Use this new information and see if you need update any food entries in the food_entries table
+Generate the UPDATE statement sql for sqlite if there anything to update

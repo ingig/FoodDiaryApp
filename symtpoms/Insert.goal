@@ -1,0 +1,4 @@
+Symptoms
+- write out 'Doing Symptoms'
+- insert into Symptoms description=%userInput%
+- append to %output% = '👍 Got it - %userInput%'

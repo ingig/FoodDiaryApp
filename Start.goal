@@ -1,8 +1,10 @@
 ﻿Start
+- set var %userInput% = "", %output% = ""
 - if %Settings.Measurement% is empty, then call !FirstTimeSetup
 - if %Settings.NostrAddress% is not empty then call ListenToMessages
 - call !ShowTotalCalories
-- ask 'You can send me what you ate today, you can also do other stuff
+- ask '\n\n ======== My food diary ========
+    You can send me what you ate today, you can also do other stuff
 
         Type in:
             'settings' to view/change settings
@@ -12,11 +14,12 @@
             delete my last entry
     
     What did you eat today?', write to %userInput%
-- call !DoUserInput
+- if %userInput% is not empty, then call !DoUserInput
+- call !Start
 
 DoUserInput
-- if %userInput% = 'settings' then !Settings, else call !HandleUserInput
-- call !Start
+- if %userInput% = 'settings'(ignore case) then !Settings, else call !HandleUserInput
+
 
 ListenToMessages
 - load public message address, write to %messageAddress%
@@ -31,13 +34,30 @@ HandleMessage
     - set %IsMessage%=false
 
 HandleUserInput
-- read llm/chooseGoalSystem.txt, write to %chooseGoalSystem%
+- select info from knowledge, write to %systemKnowlegde%
+- set %systemSettings% = "
+    Database is Sqlite
+    Use %Settings.Measurement% system
+    User language(s) is: %Settings.Languages%
+    === Knowledge provide by user to help ===
+    %systemKnowlegde%
+    === Knowledge provide by user to help ==="
+- read llm/chooseGoalSystem.txt, load vars, write to %chooseGoalSystem%
 - [llm] system: %chooseGoalSystem%
         user: %userInput%
-        model: 'gpt-3.5-turbo-1106'
-        scheme: {goalName:string}
-- call goal %goalName%
+        logger: warning
+        scheme: {plan:string, goals:[name:string, newUserInput:string]}
+        write to %plan%
+- write out %plan%
+- foreach %plan.goals% call ExecuteGoal
+- call goal SendMessage content=%output%
+
+ExecuteGoal
+- write out 'calling %item.name% - content: %item.newUserInput%'
+- call goal %item.name% userInput=%item.newUserInput%
 
 ShowTotalCalories
-- select sum(total_calories, 0) from food_entries where date(date)=date('now'), write to %totalCalories%
-- write out 'Total calories for today: %totalCalories%'
+- select sum(total_calories), 0 if null, round with 0 decimal, as totalCalories from food_entries where date(date)=date('now')
+    return 1 row
+    write to %totalCalories%
+- write out '\nTotal calories for today: %totalCalories%'

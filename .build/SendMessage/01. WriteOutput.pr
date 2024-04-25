@@ -40,7 +40,7 @@
         "content": [
           {
             "type": "text",
-            "text": "## functions available starts ##\r\nString Ask(String text, String? type = \"text\", Int32? statusCode = 200, String? regexPattern, String? errorMessage)  // Send response to user and waits for answer. type can be text|warning|error|info|debug|trace. statusCode(like http status code) should be defined by user. errorMessage is message to user when answer does not match expected regexPattern, use good grammar and correct formatting.. \nvoid Write(Object? content, Boolean? writeToBuffer = False, String? type = \"text\", Int32? statusCode = 200)  // Write to the output. type can be text|warning|error|info|debug|trace. statusCode(like http status code) should be defined by user. type=error should have statusCode between 400-599, depending on text.\r\n## functions available ends ##\r\n## defined variables ##\r\ncontent (type:Object), \r\n## defined variables ##"
+            "text": "## functions available starts ##\r\nString Ask(String text, String? type = \"text\", Int32? statusCode = 200, String? regexPattern, String? errorMessage)  // Send response to user and waits for answer. type can be text|warning|error|info|debug|trace. statusCode(like http status code) should be defined by user. regexPattern should contain start and end character if user input needs to match fully. errorMessage is message to user when answer does not match expected regexPattern, use good grammar and correct formatting.. \nvoid Write(Object? content, Boolean? writeToBuffer = False, String? type = \"text\", Int32? statusCode = 200)  // Write to the output. type can be text|warning|error|info|debug|trace. statusCode(like http status code) should be defined by user. type=error should have statusCode between 400-599, depending on text.\r\n## functions available ends ##\r\n## defined variables ##\r\ncontent (type:output), \r\n## defined variables ##"
           }
         ]
       },
@@ -56,7 +56,7 @@
     ],
     "model": "gpt-4-turbo",
     "caching": true,
-    "RawResponse": "{\n  \"FunctionName\": \"Write\",\n  \"Parameters\": [\n    {\n      \"Type\": \"Object\",\n      \"Name\": \"content\",\n      \"Value\": \"%content%\"\n    }\n  ]\n}"
+    "RawResponse": "{\n  \"FunctionName\": \"Write\",\n  \"Parameters\": [\n    {\n      \"Type\": \"Object\",\n      \"Name\": \"content\",\n      \"Value\": \"%content%\"\n    }\n  ],\n  \"ReturnValue\": null\n}"
   },
   "RunOnBuild": false
 }

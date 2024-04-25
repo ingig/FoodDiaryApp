@@ -3,17 +3,17 @@
   "Comment": null,
   "GoalSteps": [
     {
-      "Text": "select sum(total_calories, 0) from food_entries where date(date)=date('now'), write to %totalCalories%",
+      "Text": "select sum(total_calories), 0 if null, round with 0 decimal, as totalCalories from food_entries where date(date)=date('now')\n    return 1 row\n    write to %totalCalories%",
       "Comment": null,
       "ModuleType": "PLang.Modules.DbModule",
-      "Name": "CalculateTotalCalories",
-      "Description": "Execute a SQL query to calculate the sum of total calories from the 'food_entries' table for today's date and store the result in the variable %totalCalories%.",
-      "PrFileName": "01. CalculateTotalCalories.pr",
-      "RelativePrPath": ".build\\Start\\ShowTotalCalories\\01. CalculateTotalCalories.pr",
+      "Name": "QueryAndStoreTotalCalories",
+      "Description": "Execute a SQL query to sum the total calories from the 'food_entries' table for today's date, handle null values by returning 0, round the result to 0 decimal places, and store the result in the variable %totalCalories%.",
+      "PrFileName": "01. QueryAndStoreTotalCalories.pr",
+      "RelativePrPath": ".build\\Start\\ShowTotalCalories\\01. QueryAndStoreTotalCalories.pr",
       "Indent": 0,
       "Execute": true,
       "RunOnce": false,
-      "Generated": "2024-04-23T09:41:30.6629761+00:00",
+      "Generated": "2024-04-25T20:27:54.2053624+00:00",
       "WaitForExecution": true,
       "ErrorHandler": null,
       "RetryHandler": null,
@@ -21,7 +21,7 @@
       "CancellationHandler": null,
       "Custom": {},
       "Number": 0,
-      "LineNumber": 42,
+      "LineNumber": 60,
       "LlmRequest": {
         "temperature": 0.0,
         "top_p": 0.0,
@@ -59,28 +59,28 @@
             "content": [
               {
                 "type": "text",
-                "text": "select sum(total_calories, 0) from food_entries where date(date)=date('now'), write to %totalCalories%"
+                "text": "select sum(total_calories), 0 if null, round with 0 decimal, as totalCalories from food_entries where date(date)=date('now')\n    return 1 row\n    write to %totalCalories%"
               }
             ]
           }
         ],
         "model": "gpt-4-turbo",
         "caching": true,
-        "RawResponse": "{\n  \"StepName\": \"CalculateTotalCalories\",\n  \"StepDescription\": \"Execute a SQL query to calculate the sum of total calories from the 'food_entries' table for today's date and store the result in the variable %totalCalories%.\",\n  \"Modules\": [\n    \"PLang.Modules.DbModule\"\n  ],\n  \"WaitForExecution\": true\n}"
+        "RawResponse": "{\n  \"StepName\": \"QueryAndStoreTotalCalories\",\n  \"StepDescription\": \"Execute a SQL query to sum the total calories from the 'food_entries' table for today's date, handle null values by returning 0, round the result to 0 decimal places, and store the result in the variable %totalCalories%.\",\n  \"Modules\": [\n    \"PLang.Modules.DbModule\"\n  ],\n  \"WaitForExecution\": true\n}"
       }
     },
     {
-      "Text": "write out 'Total calories for today: %totalCalories%'",
+      "Text": "write out '\\nTotal calories for today: %totalCalories%'",
       "Comment": null,
       "ModuleType": "PLang.Modules.OutputModule",
       "Name": "DisplayTotalCalories",
-      "Description": "Output the text 'Total calories for today:' followed by the value of the variable %totalCalories%",
+      "Description": "Output the total calories for today to the user interface, displaying the message with a newline character before it.",
       "PrFileName": "02. DisplayTotalCalories.pr",
       "RelativePrPath": ".build\\Start\\ShowTotalCalories\\02. DisplayTotalCalories.pr",
       "Indent": 0,
       "Execute": true,
       "RunOnce": false,
-      "Generated": "2024-04-23T09:41:44.1866731+00:00",
+      "Generated": "2024-04-25T18:52:23.5077199+00:00",
       "WaitForExecution": true,
       "ErrorHandler": null,
       "RetryHandler": null,
@@ -88,7 +88,7 @@
       "CancellationHandler": null,
       "Custom": {},
       "Number": 1,
-      "LineNumber": 43,
+      "LineNumber": 63,
       "LlmRequest": {
         "temperature": 0.0,
         "top_p": 0.0,
@@ -126,14 +126,14 @@
             "content": [
               {
                 "type": "text",
-                "text": "write out 'Total calories for today: %totalCalories%'"
+                "text": "write out '\\nTotal calories for today: %totalCalories%'"
               }
             ]
           }
         ],
         "model": "gpt-4-turbo",
         "caching": true,
-        "RawResponse": "{\n  \"StepName\": \"DisplayTotalCalories\",\n  \"StepDescription\": \"Output the text 'Total calories for today:' followed by the value of the variable %totalCalories%\",\n  \"Modules\": [\n    \"PLang.Modules.OutputModule\"\n  ],\n  \"WaitForExecution\": true\n}"
+        "RawResponse": "{\n  \"StepName\": \"DisplayTotalCalories\",\n  \"StepDescription\": \"Output the total calories for today to the user interface, displaying the message with a newline character before it.\",\n  \"Modules\": [\n    \"PLang.Modules.OutputModule\"\n  ],\n  \"WaitForExecution\": true\n}"
       }
     }
   ],
@@ -148,5 +148,5 @@
   "GoalApiInfo": null,
   "Injections": [],
   "Signature": null,
-  "Hash": "32444576f8a9e95b2e643bbc0a3ac207b6b048d43bab651f14529bfa3699504e"
+  "Hash": "11d09a4ec3c9c96a8b2483f67780a3e0abfbe266f942bbff23b1e592485eda93"
 }

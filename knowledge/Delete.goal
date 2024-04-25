@@ -1,0 +1,16 @@
+Delete
+- call GetKnowledge
+- read llm/tableInfo.txt, into %tableInfo%
+- read file llm/deleteSystem.txt, load vars, %system%
+- read file llm/deleteAssistant.txt, load vars, %assistant%
+- [llm] system: %system%
+        assistant: %assistant%
+        logger:warning
+        user: %userInput%
+        scheme: {explain:string, sql:string|null}
+- write out 'sql:%sql% - explain:%explain%'
+- if %sql% is not null then
+    - execute delete sql %sql%
+- append to %output% = %explain%
+
+

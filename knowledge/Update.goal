@@ -1,0 +1,26 @@
+Update
+- set %knowledgeText% = ""
+- read llm/tableInfo.txt, %tableInfo%
+- read llm/updateSystem.txt, %system%
+- call GetKnowledge
+- [llm] system:%system%
+        assistant: %knowledge%
+        user: %userInput%
+        logger:warning
+        scheme: {sql:string|null, explain:string}
+- if %sql% is null, call DontKnowKnowledge, else UpdateKnowledge
+
+DontKnowKnowledge
+- foreach %knowledge% call !CreateKnowledgeText
+- append to %output% = "Couldn't find anything matching '%userInput%' in my knowledge
+    
+    This is my knowledge:
+    %knowledgeText%
+    "
+
+UpdateKnowledge
+- execute update %sql%
+- append %output% = %explain%
+
+CreateKnowledgeText
+- append %knowledgeText% = %item.info%

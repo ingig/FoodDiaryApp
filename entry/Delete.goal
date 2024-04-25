@@ -1,0 +1,13 @@
+Delete
+- write out 'Doing Delete'
+- select * from (select * from food_entries order by id desc limit 10) order by id, write to variable %foodEntries%
+- read llm/tableInfo.txt, write to %tableInfo%
+- read llm/deleteSystem.txt, load vars, write to %deleteSystem%
+- read llm/deleteAssistant.txt, load vars, write to %deleteAssistant%
+- [llm] system:%deleteSystem%
+        assistant: %deleteAssistant%
+        user:%userInput%
+        scheme: {explain:string, sql:string}
+- write out 'sql:%sql% - explain:%explain%'
+- execute sql %sql% 
+- append to %output% = %explain%

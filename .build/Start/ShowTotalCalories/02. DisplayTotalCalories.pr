@@ -5,7 +5,7 @@
       {
         "Type": "String",
         "Name": "content",
-        "Value": "Total calories for today: %totalCalories%"
+        "Value": "\nTotal calories for today: %totalCalories%"
       },
       {
         "Type": "Boolean",
@@ -25,7 +25,7 @@
     ],
     "ReturnValue": null
   },
-  "Text": "write out 'Total calories for today: %totalCalories%'",
+  "Text": "write out '\\nTotal calories for today: %totalCalories%'",
   "Reload": false,
   "LlmRequest": {
     "temperature": 0.0,
@@ -64,14 +64,14 @@
         "content": [
           {
             "type": "text",
-            "text": "write out 'Total calories for today: %totalCalories%'"
+            "text": "write out '\nTotal calories for today: %totalCalories%'"
           }
         ]
       }
     ],
     "model": "gpt-4-turbo",
     "caching": true,
-    "RawResponse": "{\n  \"FunctionName\": \"Write\",\n  \"Parameters\": [\n    {\n      \"Type\": \"String\",\n      \"Name\": \"content\",\n      \"Value\": \"Total calories for today: %totalCalories%\"\n    },\n    {\n      \"Type\": \"Boolean\",\n      \"Name\": \"writeToBuffer\",\n      \"Value\": false\n    },\n    {\n      \"Type\": \"String\",\n      \"Name\": \"type\",\n      \"Value\": \"text\"\n    },\n    {\n      \"Type\": \"Int32\",\n      \"Name\": \"statusCode\",\n      \"Value\": 200\n    }\n  ]\n}"
+    "RawResponse": "{\n  \"FunctionName\": \"Write\",\n  \"Parameters\": [\n    {\n      \"Type\": \"String\",\n      \"Name\": \"content\",\n      \"Value\": \"\\nTotal calories for today: %totalCalories%\"\n    },\n    {\n      \"Type\": \"Boolean\",\n      \"Name\": \"writeToBuffer\",\n      \"Value\": false\n    },\n    {\n      \"Type\": \"String\",\n      \"Name\": \"type\",\n      \"Value\": \"text\"\n    },\n    {\n      \"Type\": \"Int32\",\n      \"Name\": \"statusCode\",\n      \"Value\": 200\n    }\n  ]\n}"
   },
   "RunOnBuild": false
 }

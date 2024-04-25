@@ -49,7 +49,7 @@
           },
           {
             "type": "text",
-            "text": "Following Relay servers are available: [\"wss://relay.damus.io\",\"wss://nostr-pub.wellorder.net\",\"wss://offchain.pub\",\"wss://nos.lol\",\"wss://relay.nostr.band\"].\r\nFollowing are Nostr accounts:[{\"IsDefault\":false,\"IsArchived\":false,\"Name\":\"Default\",\"PrivateKeyBech32\":\"\",\"HexPublicKey\":\"941f123e2764345b916c1bf6593c5fa9f85673d89d9d9f8612b2f3eae3ffafb8\",\"Bech32PublicKey\":\"npub1js03y038vs69hytvr0m9j0zl48u9vu7cnkwelpsjkte74cll47uqt69gy0\"}]\r\n"
+            "text": "Following Relay servers are available: [\"wss://relay.damus.io\",\"wss://nostr-pub.wellorder.net\",\"wss://offchain.pub\",\"wss://nos.lol\",\"wss://relay.nostr.band\",\"wss://nostr.wine\",\"wss://purplepag.es\"].\r\nFollowing are Nostr accounts:[{\"IsDefault\":false,\"IsArchived\":false,\"Name\":\"Default\",\"PrivateKeyBech32\":\"\",\"HexPublicKey\":\"af631f71de58513096a508d806e6554ba8c3cff269054a2c190171f28d9c7672\",\"Bech32PublicKey\":\"npub14a337uw7tpgnp949prvqdej4fw5v8nljdyz55tqeq9cl9rvuweeq072hun\"}]\r\n"
           }
         ]
       },

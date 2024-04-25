@@ -1,0 +1,18 @@
+Query
+- write out 'Doing Query'
+- read llm/tableInfo.txt, write to %tableInfo%
+- read llm/querySystem.txt, load vars, write to %querySystem%
+- [llm] system:%querySystem%
+        user: %userInput%
+        scheme: {sql:string, error:number|null, error_description:string|null}
+- if %error% is not null, then call !Chat, else call DoResults
+
+DoResults
+- do select on db, %sql%, write to %results%
+- read llm/queryResultsSystem.txt, write to %queryResultsSystem%
+- [llm] system:%queryResultsSystem%
+        assistant: '=== Database results ===\n%results%\n=== Database results ==='
+        user: %userInput%
+        model: 'gpt-3.5-turbo',
+        write to %message%
+- append to %output% = %message%

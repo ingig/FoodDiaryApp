@@ -1,4 +1,2 @@
 BuildEvents
 - before builder ends, call goal !CheckGoals
-/- when builder starts, call goal apps/plang.is/CheckVersion, dont wait
-/- when builder ends, call goal apps/plang.is/WriteOutNewVersion

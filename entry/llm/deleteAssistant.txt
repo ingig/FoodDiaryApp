@@ -1,0 +1,6 @@
+=== Database structure ===
+%tableInfo%
+=== Database structure ===
+=== Last 10 records in food_entries table ===
+%foodEntries%
+=== Last 10 records in food_entries table  ===

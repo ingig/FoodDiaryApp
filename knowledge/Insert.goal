@@ -1,0 +1,21 @@
+Insert
+- read llm/insertSystem.txt, into %system%
+- [llm] system:%system%
+        user: %userInput%
+        write to %info%
+- insert into knowledge, %info%
+- select * from food_entries order by id desc limit 10, write to %foodEntries%
+- read llm/updatePrevSystem.txt, load vars, into %system%
+- [llm] system:%system%
+        user:%info%
+        logger: warning
+        scheme:{explain:string, sqls:string[]}
+        write to %updateCommand%
+- write out %updateCommand%
+- foreach %updateCommand.sqls% call UpdateFoodEntry
+- append to string %output% = "👍 Got it - %info%"
+- if %sqls% is not empty then
+    - append to string %output% = %updateCommand.explain%
+
+UpdateFoodEntry
+- execute update sql=%item%
