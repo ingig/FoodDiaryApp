@@ -9,6 +9,7 @@ The Food Diary App allows users to log their meals using natural language input 
 - Log meals in natural language, e.g., "ate chicken 100g, with broccoli and cauliflower."
 - Analyze nutritional content automatically.
 - Understands multiple languages, mixed in same sentance
+- Teach the app, "I'm female 45 years old", "I'm going low carb","bcf means burger with bacon and fries", "Ísey Skyr has 3.5gr carbs, 4gr fat, 9gr protein in 100gr, 170gr per serving"
 - Query historical data, e.g., "What did I eat yesterday?" or "What is my carb intake today?"
 - Update entries, e.g., "I had 2 sandwiches, not one."
 - Remove the latest entry by simply saying it, 'remove my newest food entry'.
@@ -43,7 +44,8 @@ _If you have OpenAI API key, you can start with the command `plang --llmservice=
 
 Once started, you can interact with the Food Diary App using a messaging apps [Amethyst (Android)](https://play.google.com/store/apps/details?id=com.vitorpamplona.amethyst&hl=en&gl=US) or [Damus (iPhone)](https://apps.apple.com/us/app/damus/id1628663131). Here’s how to get started:
 
-- **Log an Entry:** Send a message detailing what you ate, e.g., "ate chicken 100g, with broccoli and cauliflower."
+- **Log an Entry:** Send a message detailing what you ate, e.g., "ate chicken 100g, with broccoli and cauliflower.
+- **Add Knowledge:** Teach the your custom behavior, "eb means 1 egg and 3 bacon" allowing you to send short messages, if your message is "2 eb", app will know it's "2 eggs and 6 bacons"
 - **Symptoms:** Add symptoms that you have after eating, collecting them and then later ask for relation between food and symptoms
 - **Query Entries:** Ask questions like, "What did I eat yesterday?" or "How many carbs did I consume today?"
 - **Correct Entries:** Send corrections as needed, e.g., "I had 2 sandwiches, not one."
