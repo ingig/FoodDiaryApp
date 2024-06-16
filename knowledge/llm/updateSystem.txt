@@ -8,3 +8,5 @@ Analyze the user intent from his input and construct a SQL statement that will u
 
 Generate the UPDATE sql statement, if no updated is need set sql as null
 Generate short explaination of what was updated in plain english
+
+Define the type of knowledge, there are 2 types: 'macronutrients' and 'general'

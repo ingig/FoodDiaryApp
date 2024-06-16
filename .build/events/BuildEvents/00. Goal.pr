@@ -90,9 +90,9 @@
   "RelativeGoalFolderPath": "\\events",
   "RelativePrPath": ".build\\events\\BuildEvents\\00. Goal.pr",
   "RelativePrFolderPath": ".build\\events\\BuildEvents",
-  "BuilderVersion": "0.1.0.7",
+  "BuilderVersion": "0.1.0.9",
   "GoalApiInfo": null,
   "Injections": [],
   "Signature": null,
-  "Hash": "29cab3fe0e6c2969c0a8c2fcf359d7c4de68b85f8d28268abebb39c5a3105bdb"
+  "Hash": "84b194dbbbc1af10bb59a81965aafc50b7f6cbdbeb1cd8c7997aa23f4a2357f7"
 }

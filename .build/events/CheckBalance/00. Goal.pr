@@ -144,9 +144,9 @@
   "RelativeGoalFolderPath": "\\events",
   "RelativePrPath": ".build\\events\\CheckBalance\\00. Goal.pr",
   "RelativePrFolderPath": ".build\\events\\CheckBalance",
-  "BuilderVersion": "0.1.0.7",
+  "BuilderVersion": "0.1.0.9",
   "GoalApiInfo": null,
   "Injections": [],
   "Signature": null,
-  "Hash": "bd3c2be9ee8d656779372650b688e2a96c78aa35b530eee7c5e3a6ab805eeac3"
+  "Hash": "51f2530f7cb763ceb59fc92891456529cf11972813650bf143cddc0256655766"
 }

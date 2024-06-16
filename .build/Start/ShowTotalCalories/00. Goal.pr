@@ -21,7 +21,7 @@
       "CancellationHandler": null,
       "Custom": {},
       "Number": 0,
-      "LineNumber": 60,
+      "LineNumber": 53,
       "LlmRequest": {
         "temperature": 0.0,
         "top_p": 0.0,
@@ -88,7 +88,7 @@
       "CancellationHandler": null,
       "Custom": {},
       "Number": 1,
-      "LineNumber": 63,
+      "LineNumber": 56,
       "LlmRequest": {
         "temperature": 0.0,
         "top_p": 0.0,
@@ -144,9 +144,9 @@
   "RelativeGoalFolderPath": "\\",
   "RelativePrPath": ".build\\Start\\ShowTotalCalories\\00. Goal.pr",
   "RelativePrFolderPath": ".build\\Start\\ShowTotalCalories",
-  "BuilderVersion": "0.1.0.7",
+  "BuilderVersion": "0.1.0.9",
   "GoalApiInfo": null,
   "Injections": [],
   "Signature": null,
-  "Hash": "11d09a4ec3c9c96a8b2483f67780a3e0abfbe266f942bbff23b1e592485eda93"
+  "Hash": "316c4ddd8df643a72d6f0d0a86fe728688b48a3a6351ad0b3365651cac07b1db"
 }

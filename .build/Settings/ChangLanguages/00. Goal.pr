@@ -144,9 +144,9 @@
   "RelativeGoalFolderPath": "\\",
   "RelativePrPath": ".build\\Settings\\ChangLanguages\\00. Goal.pr",
   "RelativePrFolderPath": ".build\\Settings\\ChangLanguages",
-  "BuilderVersion": "0.1.0.7",
+  "BuilderVersion": "0.1.0.9",
   "GoalApiInfo": null,
   "Injections": [],
   "Signature": null,
-  "Hash": "9bc51d4d26727e5cf6e2c5a26fea3e0831bcfb6e49ed15385def2c964c9a53eb"
+  "Hash": "f683ff50af8247efc6c22318decaf3eefbfae0b08bbbc1e545a29f5872107595"
 }

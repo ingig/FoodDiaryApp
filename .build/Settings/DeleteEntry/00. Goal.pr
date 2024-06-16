@@ -345,7 +345,7 @@
   "RelativeGoalFolderPath": "\\",
   "RelativePrPath": ".build\\Settings\\DeleteEntry\\00. Goal.pr",
   "RelativePrFolderPath": ".build\\Settings\\DeleteEntry",
-  "BuilderVersion": "0.1.0.7",
+  "BuilderVersion": "0.1.0.9",
   "GoalApiInfo": {
     "Method": "DELETE",
     "Description": "This API endpoint deletes a specific food entry from the database. It first retrieves a list of food entries ordered by their ID in descending order. The user is then prompted to select an entry to delete by specifying the entry's ID number. Once the ID is provided, the corresponding entry is deleted from the database.",
@@ -358,5 +358,5 @@
   },
   "Injections": [],
   "Signature": null,
-  "Hash": "7ba4e744f8734d834ab6a23153f97fdafd5cbcc10b598870ff8659afc013b652"
+  "Hash": "0c692d5924b3ea601260c3a533f65f587382298993c72aa66764a194cafb2973"
 }

@@ -271,17 +271,17 @@
       }
     },
     {
-      "Text": "[llm] system:%system%\n        assistant: %knowledge%\n        user: %userInput%\n        logger:warning\n        scheme: {sql:string|null, explain:string}",
+      "Text": "[llm] system:%system%\n        assistant: %knowledge%\n        user: %userInput%\n        logger:warning\n        scheme: {explain:string, sqls:string[]|null}",
       "Comment": null,
       "ModuleType": "PLang.Modules.LlmModule",
       "Name": "ProcessLLMInteraction",
-      "Description": "Use the LLM module to process interactions involving system configurations, assistant knowledge, and user input. Log a warning message and handle the output with a specified scheme.",
+      "Description": "Use the LLM module to process interactions involving system configurations, assistant knowledge, and user input. Log warnings and handle the output in a structured scheme with explanations and optional SQL queries.",
       "PrFileName": "05. ProcessLLMInteraction.pr",
       "RelativePrPath": ".build\\knowledge\\Update\\05. ProcessLLMInteraction.pr",
       "Indent": 0,
       "Execute": true,
       "RunOnce": false,
-      "Generated": "2024-04-25T21:40:13.5441489+00:00",
+      "Generated": "2024-04-28T13:45:58.4487281+00:00",
       "WaitForExecution": true,
       "ErrorHandler": null,
       "RetryHandler": null,
@@ -327,28 +327,28 @@
             "content": [
               {
                 "type": "text",
-                "text": "[llm] system:%system%\n        assistant: %knowledge%\n        user: %userInput%\n        logger:warning\n        scheme: {sql:string|null, explain:string}"
+                "text": "[llm] system:%system%\n        assistant: %knowledge%\n        user: %userInput%\n        logger:warning\n        scheme: {explain:string, sqls:string[]|null}"
               }
             ]
           }
         ],
         "model": "gpt-4-turbo",
         "caching": true,
-        "RawResponse": "{\n  \"StepName\": \"ProcessLLMInteraction\",\n  \"StepDescription\": \"Use the LLM module to process interactions involving system configurations, assistant knowledge, and user input. Log a warning message and handle the output with a specified scheme.\",\n  \"Modules\": [\n    \"PLang.Modules.LlmModule\"\n  ],\n  \"WaitForExecution\": true\n}"
+        "RawResponse": "{\n  \"StepName\": \"ProcessLLMInteraction\",\n  \"StepDescription\": \"Use the LLM module to process interactions involving system configurations, assistant knowledge, and user input. Log warnings and handle the output in a structured scheme with explanations and optional SQL queries.\",\n  \"Modules\": [\n    \"PLang.Modules.LlmModule\"\n  ],\n  \"WaitForExecution\": true\n}"
       }
     },
     {
-      "Text": "if %sql% is null, call DontKnowKnowledge, else UpdateKnowledge",
+      "Text": "if %sqls% is null, call DontKnowKnowledge, else ExecuteSqls",
       "Comment": null,
       "ModuleType": "PLang.Modules.ConditionalModule",
-      "Name": "ConditionalKnowledgeUpdate",
-      "Description": "Check if the SQL variable is null. If it is null, call the DontKnowKnowledge goal. If it is not null, call the UpdateKnowledge goal.",
-      "PrFileName": "06. ConditionalKnowledgeUpdate.pr",
-      "RelativePrPath": ".build\\knowledge\\Update\\06. ConditionalKnowledgeUpdate.pr",
+      "Name": "ConditionalSqlExecution",
+      "Description": "Check if the variable %sqls% is null. If it is null, call the goal DontKnowKnowledge. If it is not null, execute the SQL statements contained in %sqls%.",
+      "PrFileName": "06. ConditionalSqlExecution.pr",
+      "RelativePrPath": ".build\\knowledge\\Update\\06. ConditionalSqlExecution.pr",
       "Indent": 0,
       "Execute": true,
       "RunOnce": false,
-      "Generated": "2024-04-25T21:40:14.7479199+00:00",
+      "Generated": "2024-04-28T13:46:09.1992116+00:00",
       "WaitForExecution": true,
       "ErrorHandler": {
         "IgnoreErrors": false,
@@ -400,14 +400,14 @@
             "content": [
               {
                 "type": "text",
-                "text": "if %sql% is null, call DontKnowKnowledge, else UpdateKnowledge"
+                "text": "if %sqls% is null, call DontKnowKnowledge, else ExecuteSqls"
               }
             ]
           }
         ],
         "model": "gpt-4-turbo",
         "caching": true,
-        "RawResponse": "{\n  \"StepName\": \"ConditionalKnowledgeUpdate\",\n  \"StepDescription\": \"Check if the SQL variable is null. If it is null, call the DontKnowKnowledge goal. If it is not null, call the UpdateKnowledge goal.\",\n  \"Modules\": [\n    \"PLang.Modules.ConditionalModule\",\n    \"PLang.Modules.CallGoalModule\"\n  ],\n  \"WaitForExecution\": true,\n  \"ErrorHandler\": {\n    \"OnExceptionContainingTextCallGoal\": {\n      \"*\": \"HandleError\"\n    }\n  }\n}"
+        "RawResponse": "{\n  \"StepName\": \"ConditionalSqlExecution\",\n  \"StepDescription\": \"Check if the variable %sqls% is null. If it is null, call the goal DontKnowKnowledge. If it is not null, execute the SQL statements contained in %sqls%.\",\n  \"Modules\": [\n    \"PLang.Modules.ConditionalModule\",\n    \"PLang.Modules.CallGoalModule\",\n    \"PLang.Modules.DbModule\"\n  ],\n  \"WaitForExecution\": true,\n  \"ErrorHandler\": {\n    \"IgnoreErrors\": false,\n    \"OnExceptionContainingTextCallGoal\": {\n      \"*\": \"HandleError\"\n    },\n    \"ContinueToNextStep\": false\n  }\n}"
       }
     }
   ],
@@ -418,9 +418,9 @@
   "RelativeGoalFolderPath": "\\knowledge",
   "RelativePrPath": ".build\\knowledge\\Update\\00. Goal.pr",
   "RelativePrFolderPath": ".build\\knowledge\\Update",
-  "BuilderVersion": "0.1.0.7",
+  "BuilderVersion": "0.1.0.9",
   "GoalApiInfo": null,
   "Injections": [],
   "Signature": null,
-  "Hash": "8e6f988b662d3499ff8a421e8a5a1693f569b992a78a0c8da27ec5c12890ad72"
+  "Hash": "500ce5f667b092944a7bbb46304213603c39635b8a7ce0ad04bc3d2d79596a67"
 }

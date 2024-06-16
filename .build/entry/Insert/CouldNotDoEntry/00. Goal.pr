@@ -21,7 +21,7 @@
       "CancellationHandler": null,
       "Custom": {},
       "Number": 0,
-      "LineNumber": 57,
+      "LineNumber": 58,
       "LlmRequest": {
         "temperature": 0.0,
         "top_p": 0.0,
@@ -77,9 +77,9 @@
   "RelativeGoalFolderPath": "\\entry",
   "RelativePrPath": ".build\\entry\\Insert\\CouldNotDoEntry\\00. Goal.pr",
   "RelativePrFolderPath": ".build\\entry\\Insert\\CouldNotDoEntry",
-  "BuilderVersion": "0.1.0.7",
+  "BuilderVersion": "0.1.0.9",
   "GoalApiInfo": null,
   "Injections": [],
   "Signature": null,
-  "Hash": "f998d20a2cdc5fc8a02e973e47a6d4744532bcfe44a64078973c31ffae318c56"
+  "Hash": "ae7e8aa2298d4cfea30719efeeb447270994089594e54db0bb7fa80b0622d372"
 }

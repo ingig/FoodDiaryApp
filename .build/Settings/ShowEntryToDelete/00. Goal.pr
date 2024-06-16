@@ -77,7 +77,7 @@
   "RelativeGoalFolderPath": "\\",
   "RelativePrPath": ".build\\Settings\\ShowEntryToDelete\\00. Goal.pr",
   "RelativePrFolderPath": ".build\\Settings\\ShowEntryToDelete",
-  "BuilderVersion": "0.1.0.7",
+  "BuilderVersion": "0.1.0.9",
   "GoalApiInfo": {
     "Method": "GET",
     "Description": "This API endpoint retrieves the details of an entry that is marked for deletion. It formats and displays the entry's ID, date, dish name, total calories, and any associated notes.",
@@ -90,5 +90,5 @@
   },
   "Injections": [],
   "Signature": null,
-  "Hash": "490e73bbb7e791de50e7bab2919b0930bccabdcfc1c5db492b2c3c35bd42e1de"
+  "Hash": "4ca82beea89e27c4368bbe877527f827e6c5af0312ad70902eb7640d04cdf614"
 }

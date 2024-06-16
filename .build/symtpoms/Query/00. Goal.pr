@@ -479,9 +479,9 @@
   "RelativeGoalFolderPath": "\\symtpoms",
   "RelativePrPath": ".build\\symtpoms\\Query\\00. Goal.pr",
   "RelativePrFolderPath": ".build\\symtpoms\\Query",
-  "BuilderVersion": "0.1.0.7",
+  "BuilderVersion": "0.1.0.9",
   "GoalApiInfo": null,
   "Injections": [],
   "Signature": null,
-  "Hash": "17580b33f5b15b60364d04b81e20222af4b46449da9ce4553ab78d96810078bd"
+  "Hash": "3e6a06c703cd0fb1d2ed7be025a8009088336f59f8458bc632ac148a5a3d29c9"
 }

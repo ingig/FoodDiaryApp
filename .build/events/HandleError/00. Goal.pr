@@ -211,9 +211,9 @@
   "RelativeGoalFolderPath": "\\events",
   "RelativePrPath": ".build\\events\\HandleError\\00. Goal.pr",
   "RelativePrFolderPath": ".build\\events\\HandleError",
-  "BuilderVersion": "0.1.0.7",
+  "BuilderVersion": "0.1.0.9",
   "GoalApiInfo": null,
   "Injections": [],
   "Signature": null,
-  "Hash": "43860d7f5c6fb19306232435a2f2bb4b7c459249495d4a5f906e29fad885fe13"
+  "Hash": "b732d22b29c5ae3cc42e7b99c186f883517098fdfa00dc385735edfe815a9b54"
 }

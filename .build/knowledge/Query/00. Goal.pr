@@ -211,9 +211,9 @@
   "RelativeGoalFolderPath": "\\knowledge",
   "RelativePrPath": ".build\\knowledge\\Query\\00. Goal.pr",
   "RelativePrFolderPath": ".build\\knowledge\\Query",
-  "BuilderVersion": "0.1.0.7",
+  "BuilderVersion": "0.1.0.9",
   "GoalApiInfo": null,
   "Injections": [],
   "Signature": null,
-  "Hash": "21b39a9e478ac7903cce667be439128dc6d31e9ee9c6b2faec39f27489c552b4"
+  "Hash": "96fd9d6765451fb46bb6a02a1d13cb38f66329a84e067b810cb7fb4dad6b4460"
 }

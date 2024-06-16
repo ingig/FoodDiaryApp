@@ -20,3 +20,7 @@ select emojis that fits the food, limit to max 5 emojis
 ### last 10 food entries - newest first ###
 %foodEntries%
 ### last 10 food entries - newest first ###
+
+### knowledge added by user ###
+%foodKnowledge%
+### knowledge added by user ###

@@ -141,6 +141,41 @@
       "Number": 4,
       "LineNumber": 5,
       "LlmRequest": null
+    },
+    {
+      "Text": "on app start, call !LoadSystemSettings",
+      "Comment": null,
+      "ModuleType": null,
+      "Name": null,
+      "Description": null,
+      "PrFileName": null,
+      "RelativePrPath": null,
+      "Indent": 0,
+      "Execute": true,
+      "RunOnce": false,
+      "Generated": "2024-04-28T13:51:57.7404632+00:00",
+      "WaitForExecution": true,
+      "ErrorHandler": null,
+      "RetryHandler": null,
+      "CacheHandler": null,
+      "CancellationHandler": null,
+      "Custom": {
+        "Event": {
+          "EventType": "Before",
+          "EventScope": "StartOfApp",
+          "GoalToBindTo": ".*",
+          "GoalToCall": "!LoadSystemSettings",
+          "IncludePrivate": false,
+          "StepNumber": null,
+          "StepText": null,
+          "WaitForExecution": true,
+          "RunOnlyInDebugMode": false,
+          "OnErrorContinueNextStep": false
+        }
+      },
+      "Number": 5,
+      "LineNumber": 6,
+      "LlmRequest": null
     }
   ],
   "Description": null,

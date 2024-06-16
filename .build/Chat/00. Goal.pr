@@ -680,9 +680,9 @@
   "RelativeGoalFolderPath": "\\",
   "RelativePrPath": ".build\\Chat\\00. Goal.pr",
   "RelativePrFolderPath": ".build\\Chat",
-  "BuilderVersion": "0.1.0.7",
+  "BuilderVersion": "0.1.0.9",
   "GoalApiInfo": null,
   "Injections": [],
   "Signature": null,
-  "Hash": "94b4944f72d12ec35bdda83d3e850109569b2999774990f12c095eeae766f3a1"
+  "Hash": "3063d32d31cba97c64efb4d110d67e9996738c6b5f3d917ae6e39aef154a3f07"
 }

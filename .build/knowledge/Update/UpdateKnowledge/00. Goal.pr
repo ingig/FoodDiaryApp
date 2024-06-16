@@ -21,7 +21,7 @@
       "CancellationHandler": null,
       "Custom": {},
       "Number": 0,
-      "LineNumber": 22,
+      "LineNumber": 24,
       "LlmRequest": {
         "temperature": 0.0,
         "top_p": 0.0,
@@ -88,7 +88,7 @@
       "CancellationHandler": null,
       "Custom": {},
       "Number": 1,
-      "LineNumber": 23,
+      "LineNumber": 25,
       "LlmRequest": {
         "temperature": 0.0,
         "top_p": 0.0,
@@ -144,9 +144,9 @@
   "RelativeGoalFolderPath": "\\knowledge",
   "RelativePrPath": ".build\\knowledge\\Update\\UpdateKnowledge\\00. Goal.pr",
   "RelativePrFolderPath": ".build\\knowledge\\Update\\UpdateKnowledge",
-  "BuilderVersion": "0.1.0.7",
+  "BuilderVersion": "0.1.0.9",
   "GoalApiInfo": null,
   "Injections": [],
   "Signature": null,
-  "Hash": "19c474282f766a0ebef0d65cebaa6b5519517f186dfef8a50c9d28ad504e5018"
+  "Hash": "8416a9f63c3c18d6f7eec9f4811cd6b975b8df1eb32367def63c839de3bc8802"
 }

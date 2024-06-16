@@ -77,9 +77,9 @@
   "RelativeGoalFolderPath": "\\events",
   "RelativePrPath": ".build\\events\\CheckGoals\\ShowAllValid\\00. Goal.pr",
   "RelativePrFolderPath": ".build\\events\\CheckGoals\\ShowAllValid",
-  "BuilderVersion": "0.1.0.7",
+  "BuilderVersion": "0.1.0.9",
   "GoalApiInfo": null,
   "Injections": [],
   "Signature": null,
-  "Hash": "4f996412ca0ee340b6701b0f4c7824bb282fc5fdf846ef15f24e4b83d3484b9c"
+  "Hash": "705a85d647d0cff025c7497aded3be0ba3262f6f461348706ecfc5ab71db504b"
 }

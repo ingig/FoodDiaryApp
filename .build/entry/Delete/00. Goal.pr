@@ -613,7 +613,7 @@
   "RelativeGoalFolderPath": "\\entry",
   "RelativePrPath": ".build\\entry\\Delete\\00. Goal.pr",
   "RelativePrFolderPath": ".build\\entry\\Delete",
-  "BuilderVersion": "0.1.0.7",
+  "BuilderVersion": "0.1.0.9",
   "GoalApiInfo": {
     "Method": "DELETE",
     "Description": "This API endpoint performs a deletion operation. It starts by writing out 'Doing Delete'. It then queries the last 10 entries from the 'food_entries' table, orders them by ID, and stores the result in a variable. It reads various configuration files related to deletion from the 'llm' directory, loads necessary variables, and constructs a deletion scheme. The constructed SQL query is then executed, and the explanation of the operation is appended to the output.",
@@ -626,5 +626,5 @@
   },
   "Injections": [],
   "Signature": null,
-  "Hash": "ec5d717a1c011aab5c16d43dca4a0a53c8e9fa2c7a9e702b55529a766072c517"
+  "Hash": "09749a38d2cbd131496b7303cbc5b4383f06c37ac15af393aaf78ef5b59129a2"
 }

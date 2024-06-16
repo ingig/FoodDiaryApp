@@ -10,3 +10,5 @@
 - create table knowledge, columns: info(string), created(datetime, now)
 - add columns to food_entries
     fiber(number), net_carbs(number)
+- add column 'type'(string) to table knowledge
+- call goal knowledge/Update userInput='Update all knowledge in database with correct type'

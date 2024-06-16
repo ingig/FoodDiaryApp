@@ -5,7 +5,7 @@
       {
         "Type": "String",
         "Name": "sql",
-        "Value": "insert into knowledge (id, info) values (@id, @info)"
+        "Value": "insert into knowledge (id, info, type) values (@id, @info, @type)"
       },
       {
         "Type": "List<object>",
@@ -20,13 +20,18 @@
             "ParameterName": "@info",
             "VariableNameOrValue": "%info%",
             "TypeFullName": "System.String"
+          },
+          {
+            "ParameterName": "@type",
+            "VariableNameOrValue": "%type%",
+            "TypeFullName": "System.String"
           }
         ]
       }
     ],
     "ReturnValue": null
   },
-  "Text": "insert into knowledge, %info%",
+  "Text": "insert into knowledge, %info%, %type%",
   "Reload": false,
   "LlmRequest": {
     "temperature": 0.0,
@@ -69,14 +74,14 @@
         "content": [
           {
             "type": "text",
-            "text": "insert into knowledge, %info%"
+            "text": "insert into knowledge, %info%, %type%"
           }
         ]
       }
     ],
     "model": "gpt-4-turbo",
     "caching": true,
-    "RawResponse": "```json\n{\n  \"FunctionName\": \"Insert\",\n  \"Parameters\": [\n    {\n      \"Type\": \"String\",\n      \"Name\": \"sql\",\n      \"Value\": \"insert into knowledge (id, info) values (@id, @info)\"\n    },\n    {\n      \"Type\": \"List<object>\",\n      \"Name\": \"SqlParameters\",\n      \"Value\": [\n        {\n          \"ParameterName\": \"@id\",\n          \"VariableNameOrValue\": \"%id%\",\n          \"TypeFullName\": \"System.Int64\"\n        },\n        {\n          \"ParameterName\": \"@info\",\n          \"VariableNameOrValue\": \"%info%\",\n          \"TypeFullName\": \"System.String\"\n        }\n      ]\n    }\n  ]\n}\n```"
+    "RawResponse": "```json\n{\n  \"FunctionName\": \"Insert\",\n  \"Parameters\": [\n    {\n      \"Type\": \"String\",\n      \"Name\": \"sql\",\n      \"Value\": \"insert into knowledge (id, info, type) values (@id, @info, @type)\"\n    },\n    {\n      \"Type\": \"List<object>\",\n      \"Name\": \"SqlParameters\",\n      \"Value\": [\n        {\n          \"ParameterName\": \"@id\",\n          \"VariableNameOrValue\": \"%id%\",\n          \"TypeFullName\": \"System.Int64\"\n        },\n        {\n          \"ParameterName\": \"@info\",\n          \"VariableNameOrValue\": \"%info%\",\n          \"TypeFullName\": \"System.String\"\n        },\n        {\n          \"ParameterName\": \"@type\",\n          \"VariableNameOrValue\": \"%type%\",\n          \"TypeFullName\": \"System.String\"\n        }\n      ]\n    }\n  ]\n}\n```"
   },
   "RunOnBuild": false
 }

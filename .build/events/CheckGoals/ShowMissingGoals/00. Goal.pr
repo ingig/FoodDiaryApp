@@ -77,9 +77,9 @@
   "RelativeGoalFolderPath": "\\events",
   "RelativePrPath": ".build\\events\\CheckGoals\\ShowMissingGoals\\00. Goal.pr",
   "RelativePrFolderPath": ".build\\events\\CheckGoals\\ShowMissingGoals",
-  "BuilderVersion": "0.1.0.7",
+  "BuilderVersion": "0.1.0.9",
   "GoalApiInfo": null,
   "Injections": [],
   "Signature": null,
-  "Hash": "318ee4060be06a02eb74b98c57207a5861e684a905aa39abff86ab0ccb91ab41"
+  "Hash": "b2d720fcd90d168cf15d96335b55e895eaff47d9b9436a942cb22e05dcfd851f"
 }

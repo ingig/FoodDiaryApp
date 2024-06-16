@@ -5,17 +5,17 @@
       {
         "Type": "String",
         "Name": "sql",
-        "Value": "SELECT info FROM knowledge"
+        "Value": "SELECT info FROM knowledge WHERE type='macronutrients'"
       }
     ],
     "ReturnValue": [
       {
         "Type": "System.String",
-        "VariableName": "systemKnowlegde"
+        "VariableName": "foodKnowledge"
       }
     ]
   },
-  "Text": "select info from knowledge, write to %systemKnowlegde%",
+  "Text": "select info from knowledge where type='macronutrients', write to %foodKnowledge%",
   "Reload": false,
   "LlmRequest": {
     "temperature": 0.0,
@@ -58,14 +58,14 @@
         "content": [
           {
             "type": "text",
-            "text": "select info from knowledge, write to %systemKnowlegde%"
+            "text": "select info from knowledge where type='macronutrients', write to %foodKnowledge%"
           }
         ]
       }
     ],
     "model": "gpt-4-turbo",
     "caching": true,
-    "RawResponse": "```json\n{\n  \"FunctionName\": \"Select\",\n  \"Parameters\": [\n    {\n      \"Type\": \"String\",\n      \"Name\": \"sql\",\n      \"Value\": \"SELECT info FROM knowledge\"\n    }\n  ],\n  \"ReturnValue\": [\n    {\n      \"Type\": \"System.String\",\n      \"VariableName\": \"systemKnowlegde\"\n    }\n  ]\n}\n```"
+    "RawResponse": "```json\n{\n  \"FunctionName\": \"Select\",\n  \"Parameters\": [\n    {\n      \"Type\": \"String\",\n      \"Name\": \"sql\",\n      \"Value\": \"SELECT info FROM knowledge WHERE type='macronutrients'\"\n    }\n  ],\n  \"ReturnValue\": [\n    {\n      \"Type\": \"System.String\",\n      \"VariableName\": \"foodKnowledge\"\n    }\n  ]\n}\n```"
   },
   "RunOnBuild": false
 }

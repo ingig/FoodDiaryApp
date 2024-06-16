@@ -21,7 +21,7 @@
       "CancellationHandler": null,
       "Custom": {},
       "Number": 0,
-      "LineNumber": 26,
+      "LineNumber": 28,
       "LlmRequest": {
         "temperature": 0.0,
         "top_p": 0.0,
@@ -77,7 +77,7 @@
   "RelativeGoalFolderPath": "\\knowledge",
   "RelativePrPath": ".build\\knowledge\\Update\\CreateKnowledgeText\\00. Goal.pr",
   "RelativePrFolderPath": ".build\\knowledge\\Update\\CreateKnowledgeText",
-  "BuilderVersion": "0.1.0.7",
+  "BuilderVersion": "0.1.0.9",
   "GoalApiInfo": {
     "Method": "POST",
     "Description": "This API endpoint appends the provided knowledge text to an existing knowledge base. The knowledge text to be appended is specified in the 'knowledgeText' parameter, which is derived from the 'item.info' field.",
@@ -90,5 +90,5 @@
   },
   "Injections": [],
   "Signature": null,
-  "Hash": "b937dcc79ce77f582d6515df15391a354b510796fafc195c8abab1034450c09d"
+  "Hash": "3900e74db2245b90d6d12dd44ac09a754860468a07ffb769c32c5f1d1193d13c"
 }

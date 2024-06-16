@@ -7,8 +7,8 @@ Update
         assistant: %knowledge%
         user: %userInput%
         logger:warning
-        scheme: {sql:string|null, explain:string}
-- if %sql% is null, call DontKnowKnowledge, else UpdateKnowledge
+        scheme: {explain:string, sqls:string[]|null}
+- if %sqls% is null, call DontKnowKnowledge, else ExecuteSqls
 
 DontKnowKnowledge
 - foreach %knowledge% call !CreateKnowledgeText
@@ -17,6 +17,8 @@ DontKnowKnowledge
     This is my knowledge:
     %knowledgeText%
     "
+ExecuteSqls
+- foreach %sqls% call UpdateKnowledge item=%sql%
 
 UpdateKnowledge
 - execute update %sql%

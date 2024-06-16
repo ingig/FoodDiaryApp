@@ -21,7 +21,7 @@
       "CancellationHandler": null,
       "Custom": {},
       "Number": 0,
-      "LineNumber": 35,
+      "LineNumber": 36,
       "LlmRequest": {
         "temperature": 0.0,
         "top_p": 0.0,
@@ -88,7 +88,7 @@
       "CancellationHandler": null,
       "Custom": {},
       "Number": 1,
-      "LineNumber": 42,
+      "LineNumber": 43,
       "LlmRequest": {
         "temperature": 0.0,
         "top_p": 0.0,
@@ -155,7 +155,7 @@
       "CancellationHandler": null,
       "Custom": {},
       "Number": 2,
-      "LineNumber": 45,
+      "LineNumber": 46,
       "LlmRequest": {
         "temperature": 0.0,
         "top_p": 0.0,
@@ -211,9 +211,9 @@
   "RelativeGoalFolderPath": "\\entry",
   "RelativePrPath": ".build\\entry\\Insert\\InsertEntry\\00. Goal.pr",
   "RelativePrFolderPath": ".build\\entry\\Insert\\InsertEntry",
-  "BuilderVersion": "0.1.0.7",
+  "BuilderVersion": "0.1.0.9",
   "GoalApiInfo": null,
   "Injections": [],
   "Signature": null,
-  "Hash": "b71ba504e8eb51f81af409088acd0c58c79515954389a78d32945acbbddf8791"
+  "Hash": "eb0adfad0e0b8b645fc0e325c7f52ac6ff289bf6d8d79abdfaa13f2ffbd664c8"
 }

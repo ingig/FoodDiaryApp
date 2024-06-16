@@ -3,3 +3,4 @@ Events
 - before goal ends, include private goals, call !SendDebug, only in debug mode
 - before goal 'Start', call !CheckBalance
 - on error , call !HandleError
+- on app start, call !LoadSystemSettings

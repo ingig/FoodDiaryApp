@@ -1,0 +1,9 @@
+LoadSystemSettings
+- select info from knowledge where type='general', write to %systemKnowlegde%
+- set %systemSettings% = "
+    Database is Sqlite
+    Use %Settings.Measurement% system
+    User language(s) is: %Settings.Languages%
+    === Knowledge provide by user to help ===
+    %systemKnowlegde%
+    === Knowledge provide by user to help ==="

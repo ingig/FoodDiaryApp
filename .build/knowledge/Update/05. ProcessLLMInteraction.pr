@@ -3,7 +3,7 @@
     "FunctionName": "AskLlm",
     "Parameters": [
       {
-        "Type": "List`1<LlmMessage>",
+        "Type": "List`1[LlmMessage]",
         "Name": "promptMessages",
         "Value": [
           {
@@ -38,7 +38,7 @@
       {
         "Type": "String",
         "Name": "scheme",
-        "Value": "{sql:string|null, explain:string}"
+        "Value": "{\"explain\":\"string\",\"sqls\":[\"string\"]}"
       },
       {
         "Type": "String",
@@ -48,7 +48,7 @@
     ],
     "ReturnValue": null
   },
-  "Text": "[llm] system:%system%\n        assistant: %knowledge%\n        user: %userInput%\n        logger:warning\n        scheme: {sql:string|null, explain:string}",
+  "Text": "[llm] system:%system%\n        assistant: %knowledge%\n        user: %userInput%\n        logger:warning\n        scheme: {explain:string, sqls:string[]|null}",
   "Reload": false,
   "LlmRequest": {
     "temperature": 0.0,
@@ -91,14 +91,14 @@
         "content": [
           {
             "type": "text",
-            "text": "[llm] system:%system%\n        assistant: %knowledge%\n        user: %userInput%\n        logger:warning\n        scheme: {sql:string|null, explain:string}"
+            "text": "[llm] system:%system%\n        assistant: %knowledge%\n        user: %userInput%\n        logger:warning\n        scheme: {explain:string, sqls:string[]|null}"
           }
         ]
       }
     ],
     "model": "gpt-4-turbo",
     "caching": true,
-    "RawResponse": "{\n  \"FunctionName\": \"AskLlm\",\n  \"Parameters\": [\n    {\n      \"Type\": \"List`1<LlmMessage>\",\n      \"Name\": \"promptMessages\",\n      \"Value\": [\n        {\n          \"role\": \"system\",\n          \"content\": [\n            {\n              \"type\": \"text\",\n              \"text\": \"%system%\"\n            }\n          ]\n        },\n        {\n          \"role\": \"assistant\",\n          \"content\": [\n            {\n              \"type\": \"text\",\n              \"text\": \"%knowledge%\"\n            }\n          ]\n        },\n        {\n          \"role\": \"user\",\n          \"content\": [\n            {\n              \"type\": \"text\",\n              \"text\": \"%userInput%\"\n            }\n          ]\n        }\n      ]\n    },\n    {\n      \"Type\": \"String\",\n      \"Name\": \"scheme\",\n      \"Value\": \"{sql:string|null, explain:string}\"\n    },\n    {\n      \"Type\": \"String\",\n      \"Name\": \"loggerLevel\",\n      \"Value\": \"warning\"\n    }\n  ],\n  \"ReturnValue\": null\n}"
+    "RawResponse": "{\n  \"FunctionName\": \"AskLlm\",\n  \"Parameters\": [\n    {\n      \"Type\": \"List`1[LlmMessage]\",\n      \"Name\": \"promptMessages\",\n      \"Value\": [\n        {\n          \"role\": \"system\",\n          \"content\": [\n            {\n              \"type\": \"text\",\n              \"text\": \"%system%\"\n            }\n          ]\n        },\n        {\n          \"role\": \"assistant\",\n          \"content\": [\n            {\n              \"type\": \"text\",\n              \"text\": \"%knowledge%\"\n            }\n          ]\n        },\n        {\n          \"role\": \"user\",\n          \"content\": [\n            {\n              \"type\": \"text\",\n              \"text\": \"%userInput%\"\n            }\n          ]\n        }\n      ]\n    },\n    {\n      \"Type\": \"String\",\n      \"Name\": \"scheme\",\n      \"Value\": \"{\\\"explain\\\":\\\"string\\\",\\\"sqls\\\":[\\\"string\\\"]}\"\n    },\n    {\n      \"Type\": \"String\",\n      \"Name\": \"loggerLevel\",\n      \"Value\": \"warning\"\n    }\n  ],\n  \"ReturnValue\": null\n}"
   },
   "RunOnBuild": false
 }

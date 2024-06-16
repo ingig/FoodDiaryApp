@@ -211,9 +211,9 @@
   "RelativeGoalFolderPath": "\\",
   "RelativePrPath": ".build\\Start\\ListenToMessages\\00. Goal.pr",
   "RelativePrFolderPath": ".build\\Start\\ListenToMessages",
-  "BuilderVersion": "0.1.0.7",
+  "BuilderVersion": "0.1.0.9",
   "GoalApiInfo": null,
   "Injections": [],
   "Signature": null,
-  "Hash": "f7f5673c09f51c47ee612407c5ecd62fe2e00927c99ad5c43323acb3e36febf7"
+  "Hash": "c2690aec467445b2ac75d38b677bb11b92db804a28b035a17b70707446dd03f6"
 }

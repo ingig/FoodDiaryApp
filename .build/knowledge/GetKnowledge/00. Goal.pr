@@ -77,7 +77,7 @@
   "RelativeGoalFolderPath": "\\knowledge",
   "RelativePrPath": ".build\\knowledge\\GetKnowledge\\00. Goal.pr",
   "RelativePrFolderPath": ".build\\knowledge\\GetKnowledge",
-  "BuilderVersion": "0.1.0.7",
+  "BuilderVersion": "0.1.0.9",
   "GoalApiInfo": {
     "Method": "GET",
     "Description": "Fetches all entries from the 'knowledge' database and writes them to a variable or location denoted by '%knowledge%'.",
@@ -90,5 +90,5 @@
   },
   "Injections": [],
   "Signature": null,
-  "Hash": "96ca561fbccdbfb8863a2e5861fbfb2cd6547e41c6c32da4344e7e9597d339ba"
+  "Hash": "447e38b5ac09bc6cee0a6b6b983dcb0ac378f7b63781f1391077e8e092e1a9e0"
 }

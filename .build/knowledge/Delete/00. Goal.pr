@@ -613,7 +613,7 @@
   "RelativeGoalFolderPath": "\\knowledge",
   "RelativePrPath": ".build\\knowledge\\Delete\\00. Goal.pr",
   "RelativePrFolderPath": ".build\\knowledge\\Delete",
-  "BuilderVersion": "0.1.0.7",
+  "BuilderVersion": "0.1.0.9",
   "GoalApiInfo": {
     "Method": "DELETE",
     "Description": "This API endpoint deletes specific knowledge entries. It first retrieves the current knowledge state, identifies the system related to the deletion request from 'deleteSystem.txt', and processes user input to match against existing knowledge IDs. If the ID is found, the knowledge is deleted; if not, a 'Not Found' response is triggered.",
@@ -626,5 +626,5 @@
   },
   "Injections": [],
   "Signature": null,
-  "Hash": "a3fb70fcf52bfe406d7958ec50ad7e3b373e5c741507efe2bc3433d02dbaf35e"
+  "Hash": "fd1a78e94622386f53ff998b1c0e9513f6bd9d21adaf2389388ede7db4f94adc"
 }

@@ -77,7 +77,7 @@
   "RelativeGoalFolderPath": "\\",
   "RelativePrPath": ".build\\Start\\DoUserInput\\00. Goal.pr",
   "RelativePrFolderPath": ".build\\Start\\DoUserInput",
-  "BuilderVersion": "0.1.0.7",
+  "BuilderVersion": "0.1.0.9",
   "GoalApiInfo": {
     "Method": "POST",
     "Description": "Processes user input to perform different actions based on the input value. If the input is 'list', it shows the last five days' data. If the input is 'settings', it accesses the settings. For any other input, it analyzes and stores the input data. Finally, it initiates the start process.",
@@ -90,5 +90,5 @@
   },
   "Injections": [],
   "Signature": null,
-  "Hash": "3f8965d7922a6ded49f36deaed0cf658944480e542b18846ef8303e48e5d3767"
+  "Hash": "5f8b97053c5065b0853563042459910d36b752b33f70fc67febf4ff4f28d79d1"
 }

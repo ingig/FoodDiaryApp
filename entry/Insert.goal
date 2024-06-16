@@ -5,6 +5,7 @@
     - set %messageSent% = "This user request was was created on %event.CreatedAt%, take that into account when determining date property"
     - set %event% = null
 - write out 'Doing message:%userInput%'
+- select info from knowledge where type='macronutrients', write to %foodKnowledge%
 - select * from (select * from food_entries order by id desc limit 10) order by id, write to %foodEntries%
 - read llm/insertSystem.txt, load vars, to %insertSystem%
 - [llm] system: %insertSystem%

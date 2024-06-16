@@ -34,14 +34,7 @@ HandleMessage
     - set %IsMessage%=false
 
 HandleUserInput
-- select info from knowledge, write to %systemKnowlegde%
-- set %systemSettings% = "
-    Database is Sqlite
-    Use %Settings.Measurement% system
-    User language(s) is: %Settings.Languages%
-    === Knowledge provide by user to help ===
-    %systemKnowlegde%
-    === Knowledge provide by user to help ==="
+- call goal !LoadSystemSettings
 - read llm/chooseGoalSystem.txt, load vars, write to %chooseGoalSystem%
 - [llm] system: %chooseGoalSystem%
         user: %userInput%

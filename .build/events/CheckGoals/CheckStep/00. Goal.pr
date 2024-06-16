@@ -77,9 +77,9 @@
   "RelativeGoalFolderPath": "\\events",
   "RelativePrPath": ".build\\events\\CheckGoals\\CheckStep\\00. Goal.pr",
   "RelativePrFolderPath": ".build\\events\\CheckGoals\\CheckStep",
-  "BuilderVersion": "0.1.0.7",
+  "BuilderVersion": "0.1.0.9",
   "GoalApiInfo": null,
   "Injections": [],
   "Signature": null,
-  "Hash": "63456dcd0d8f78abbee0074920e704d43bf6e4e2ceef63f4ed924510b2502f58"
+  "Hash": "78813002a93211b3f1612ed00d2e43f9e08d5d23fadd62007ee980525b3343bd"
 }

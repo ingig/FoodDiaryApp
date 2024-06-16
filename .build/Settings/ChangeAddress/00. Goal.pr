@@ -211,9 +211,9 @@
   "RelativeGoalFolderPath": "\\",
   "RelativePrPath": ".build\\Settings\\ChangeAddress\\00. Goal.pr",
   "RelativePrFolderPath": ".build\\Settings\\ChangeAddress",
-  "BuilderVersion": "0.1.0.7",
+  "BuilderVersion": "0.1.0.9",
   "GoalApiInfo": null,
   "Injections": [],
   "Signature": null,
-  "Hash": "fbd003bbc7352830676a2406e2c1a1d16a9e587e5ecc0a7a78e699841d57fd74"
+  "Hash": "a37ef3710d147f640fc0a2716f7c42a4d295d97af87409b18be64d3dacdf8160"
 }

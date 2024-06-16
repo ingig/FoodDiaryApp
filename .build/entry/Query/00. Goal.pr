@@ -345,9 +345,9 @@
   "RelativeGoalFolderPath": "\\entry",
   "RelativePrPath": ".build\\entry\\Query\\00. Goal.pr",
   "RelativePrFolderPath": ".build\\entry\\Query",
-  "BuilderVersion": "0.1.0.7",
+  "BuilderVersion": "0.1.0.9",
   "GoalApiInfo": null,
   "Injections": [],
   "Signature": null,
-  "Hash": "4d4742086efa0de2cd7f9c5f947ee0f2c86d107747783e3b7464d3b9f80bfafc"
+  "Hash": "72a4ce0b2ee238f6396e514fb96c6a109967b7a39108b2fd8359a8592acb9980"
 }

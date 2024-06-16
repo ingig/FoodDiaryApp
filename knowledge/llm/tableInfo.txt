@@ -1,5 +1,5 @@
 Following is Table scheme in Sqlite database
 
 Table: knowledge 
-Columns: (id INTEGER PRIMARY KEY, info TEXT, created DATETIME DEFAULT (datetime('now')));
+Columns: (id INTEGER PRIMARY KEY, info TEXT, created DATETIME DEFAULT (datetime('now'), type TEXT);
 

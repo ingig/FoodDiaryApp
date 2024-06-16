@@ -2,8 +2,10 @@ Insert
 - read llm/insertSystem.txt, into %system%
 - [llm] system:%system%
         user: %userInput%
+        scheme: {info:string, type:string}
         write to %info%
-- insert into knowledge, %info%
+- insert into knowledge, %info%, %type%
+- call goal GetKnowledge
 - select * from food_entries order by id desc limit 10, write to %foodEntries%
 - read llm/updatePrevSystem.txt, load vars, into %system%
 - [llm] system:%system%

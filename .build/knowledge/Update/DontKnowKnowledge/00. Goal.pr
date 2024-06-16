@@ -144,9 +144,9 @@
   "RelativeGoalFolderPath": "\\knowledge",
   "RelativePrPath": ".build\\knowledge\\Update\\DontKnowKnowledge\\00. Goal.pr",
   "RelativePrFolderPath": ".build\\knowledge\\Update\\DontKnowKnowledge",
-  "BuilderVersion": "0.1.0.7",
+  "BuilderVersion": "0.1.0.9",
   "GoalApiInfo": null,
   "Injections": [],
   "Signature": null,
-  "Hash": "742f7d28d49d0c3815c1f0e6e093f7b5536a090b8f3118dc22748e8844bdbe83"
+  "Hash": "64ac51781d4fe816799a2c9f9ffa205925104a2ca1caf6bf9594658f3fe925cf"
 }
